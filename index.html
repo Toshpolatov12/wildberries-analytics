@@ -116,7 +116,7 @@
             </span>
           </div>
           <p class="text-xs text-slate-400 truncate flex items-center gap-2">
-            <span>Power BI</span> • <span>PostgreSQL</span> • <span>Wildberries Analytics</span>
+            <span>Power BI</span> • <span>Excel Tahlili</span> • <span>PostgreSQL</span> • <span>Wildberries Analytics</span>
           </p>
         </div>
       </div>
@@ -233,17 +233,24 @@
           <span class="px-1.5 py-0.2 text-[10px] rounded bg-amber-500/20 text-amber-300 font-mono">2 ta Dashboard</span>
         </button>
 
-        <!-- Tab 2: PostgreSQL Relyatsion Baza & SQL So'rovlari -->
+        <!-- Tab 2: Excel Tahlili & Diagrammalar -->
+        <button id="tab-btn-excel" onclick="switchTab('excel')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
+          <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+          <span>2. Excel Tahlili &amp; Diagrammalar</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded bg-emerald-500/20 text-emerald-300 font-mono">3 ta Tahlil</span>
+        </button>
+
+        <!-- Tab 3: PostgreSQL Relyatsion Baza & SQL So'rovlari -->
         <button id="tab-btn-sql" onclick="switchTab('sql')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="database" class="w-4 h-4"></i>
-          <span>2. PostgreSQL Baza &amp; SQL Tahlili</span>
+          <span>3. PostgreSQL Baza &amp; SQL Tahlili</span>
           <span class="px-1.5 py-0.2 text-[10px] rounded bg-sky-500/20 text-sky-300 font-mono">6 ta Bosqich</span>
         </button>
 
-        <!-- Tab 3: Boshlang'ich Ma'lumotlar & Loyiha Xulosasi -->
+        <!-- Tab 4: Boshlang'ich Ma'lumotlar & Loyiha Xulosasi -->
         <button id="tab-btn-data" onclick="switchTab('data')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
-          <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
-          <span>3. Ma'lumotlar Oqimi &amp; Xulosa</span>
+          <i data-lucide="git-branch" class="w-4 h-4"></i>
+          <span>4. Ma'lumotlar Oqimi &amp; Xulosa</span>
         </button>
 
       </nav>
@@ -411,7 +418,105 @@
 
 
     <!-- ======================================================================= -->
-    <!-- TAB 2: POSTGRESQL BAZA & SQL TAHLILI (SIZ YUBORGAN 6 TA HAQIQIY RASM)    -->
+    <!-- TAB 2: EXCEL TAHLILI & DIAGRAMMALAR (PIVOT, RADAR, TREEMAP, PVZ)        -->
+    <!-- ======================================================================= -->
+    <div id="tab-panel-excel" class="tab-panel hidden space-y-6">
+      
+      <!-- Excel Banner -->
+      <div class="bg-gradient-to-r from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/30 rounded-2xl p-5 sm:p-6 shadow-xl">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+            Microsoft Excel Analitik Tahlili &bull; Pivot Table, Radar, Treemap &amp; PVZ Logistika
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">
+            Excel Vositasida Toifalar Balansi, Ierarxiya va Wildberries Logistika Punktlari Tahlili
+          </h2>
+          <p class="text-sm text-slate-300 max-w-3xl leading-relaxed">
+            Pivot Table yordamida shakllantirilgan Radar diagrammasi orqali toifalar balansi, Treemap orqali assortimentning ierarxik mutanosibligi hamda Sunburst diagrammasi orqali eng yirik 10 ta hudud bo'yicha buyurtma tarqatish punktlari (PVZ) taqsimoti aniqlandi.
+          </p>
+        </div>
+      </div>
+
+      <!-- Excel Kartalari Gridi (3 ta haqiqiy visual) -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Excel 1: Pivot Table & Radar -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('excel_1')">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="compass" class="w-4 h-4 text-emerald-400"></i>
+                1. Pivot Table &amp; Radar Diagramma
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Radar Chart</span>
+            </div>
+            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3 flex items-center justify-center">
+              <img src="assets/images/excel_1_pivot_radar.png" alt="Pivot Table & Radar" class="w-full h-48 object-contain">
+            </div>
+            <p class="text-xs text-slate-300 italic border-l-2 border-emerald-500/60 pl-2.5 line-clamp-3">
+              "Bu yerda men pivot table yaratib u yordamida (Radar) nomli diagramma yaratib oldim. Ushbu diagrammada 967 ta mahsulotning toifalar boyicha tarqalish balansi aniqlandi."
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-emerald-400 flex items-center justify-between">
+            <span class="font-mono">967 SKU &bull; «Дом» (195), «Boshqa» (184)</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Excel 2: Treemap Ierarxiyasi -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('excel_2')">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="layout-grid" class="w-4 h-4 text-amber-400"></i>
+                2. Toifalar Ierarxiyasi (Treemap)
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Treemap</span>
+            </div>
+            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3 flex items-center justify-center">
+              <img src="assets/images/excel_2_treemap.png" alt="Treemap Ierarxiyasi" class="w-full h-48 object-contain">
+            </div>
+            <p class="text-xs text-slate-300 italic border-l-2 border-amber-500/60 pl-2.5 line-clamp-3">
+              "Mahsulot toifalari hajmi va ulushining ierarxik taqsimoti (Treemap)."
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-amber-400 flex items-center justify-between">
+            <span class="font-mono">Nuqta «Дом»: Qiyma 195</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Excel 3: Wildberries PVZ Sunburst -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('excel_3')">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="pie-chart" class="w-4 h-4 text-sky-400"></i>
+                3. PVZ Logistika Taqsimoti
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">Sunburst Chart</span>
+            </div>
+            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3 flex items-center justify-center">
+              <img src="assets/images/excel_3_sunburst_pvz.png" alt="PVZ Logistika Sunburst" class="w-full h-48 object-contain">
+            </div>
+            <p class="text-xs text-slate-300 italic border-l-2 border-sky-500/60 pl-2.5 line-clamp-3">
+              "Eng yirik 10 ta hudud bo'yicha Wildberries logistika punktlarining (PVZ) taqsimoti (Sunburst diagrammasi)."
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
+            <span class="font-mono">Moskva (2,023) &bull; SPb (508)</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ======================================================================= -->
+    <!-- TAB 3: POSTGRESQL BAZA & SQL TAHLILI (SIZ YUBORGAN 6 TA HAQIQIY RASM)    -->
     <!-- ======================================================================= -->
     <div id="tab-panel-sql" class="tab-panel hidden space-y-6">
       
@@ -577,7 +682,7 @@
 
 
     <!-- ======================================================================= -->
-    <!-- TAB 3: MA'LUMOTLAR OQIMI & LOYIHA XULOSASI                              -->
+    <!-- TAB 4: MA'LUMOTLAR OQIMI & LOYIHA XULOSASI                              -->
     <!-- ======================================================================= -->
     <div id="tab-panel-data" class="tab-panel hidden space-y-6">
       
@@ -589,11 +694,11 @@
             Wildberries Ma'lumotlar Tahlili Quvuri (Pipeline)
           </h3>
           <p class="text-xs sm:text-sm text-slate-300">
-            Loyiha xom CSV ma'lumotlaridan boshlab, PostgreSQL relyatsion bazasida saqlash, SQL so'rovlari orqali agregatsiyalash va Power BI orqali interaktiv vizuallashtirishgacha bo'lgan to'liq tsiklni qamrab oladi.
+            Loyiha xom CSV ma'lumotlaridan boshlab, PostgreSQL relyatsion bazasida saqlash, SQL so'rovlari orqali agregatsiyalash, Excel orqali chuqur eksplorativ tahlil hamda Power BI orqali interaktiv vizuallashtirishgacha bo'lgan to'liq tsiklni qamrab oladi.
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
           
           <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
             <div class="flex items-center gap-2 font-bold text-sky-400">
@@ -616,9 +721,19 @@
           </div>
 
           <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-emerald-400">
+              <span class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs">3</span>
+              Excel Eksplorativ Tahlili
+            </div>
+            <p class="text-slate-300">
+              Pivot Table yordamida toifalar balansi (Radar), assortiment ierarxiyasi (Treemap) hamda 10 ta yirik hudud bo'yicha PVZ tarqatish punktlari (Sunburst) aniqlandi.
+            </p>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
             <div class="flex items-center gap-2 font-bold text-purple-400">
-              <span class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-xs">3</span>
-              Power BI Interaktiv Dashboardlari
+              <span class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-xs">4</span>
+              Power BI Dashboardlari
             </div>
             <p class="text-slate-300">
               PostgreSQL ma'lumotlari asosida 2 ta to'liq dashboard tuzildi: Sharhlar va Dekompozitsiya daraxti (Decomposition Tree) hamda Narx segmentatsiyasi va SKU voronkasi (Funnel).
@@ -768,7 +883,7 @@
     function switchTab(tabId) {
       document.querySelectorAll('.tab-panel').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('border-amber-500', 'text-amber-400', 'border-sky-500', 'text-sky-400', 'font-bold');
+        btn.classList.remove('border-amber-500', 'text-amber-400', 'border-emerald-500', 'text-emerald-400', 'border-sky-500', 'text-sky-400', 'border-purple-500', 'text-purple-400', 'font-bold');
         btn.classList.add('border-transparent', 'text-slate-400', 'font-medium');
       });
 
@@ -780,7 +895,9 @@
         activeBtn.classList.remove('border-transparent', 'text-slate-400', 'font-medium');
         activeBtn.classList.add('font-bold');
         if (tabId === 'pbi') activeBtn.classList.add('border-amber-500', 'text-amber-400');
-        else activeBtn.classList.add('border-sky-500', 'text-sky-400');
+        else if (tabId === 'excel') activeBtn.classList.add('border-emerald-500', 'text-emerald-400');
+        else if (tabId === 'sql') activeBtn.classList.add('border-sky-500', 'text-sky-400');
+        else activeBtn.classList.add('border-purple-500', 'text-purple-400');
       }
     }
 
@@ -836,6 +953,89 @@ Price_Category = SWITCH(
     "Luks (> 15000)"
 )`,
         file: "powerbi_pricing_funnel_dashboard.png"
+      },
+      'excel_1': {
+        title: "Excel: Pivot Table va Radar Diagrammasi",
+        badge: "Pivot Table & Radar",
+        badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        img: "assets/images/excel_1_pivot_radar.png",
+        desc: "Bu yerda men pivot table yaratib u yordamida (Radar) nomli diagramma yaratib oldim. Ushbu diagrammada 967 ta mahsulotning toifalar boyicha tarqalish balansi aniqlandi.",
+        stats: [
+          "• Jami qatorlar soni: 967 ta SKU (Pivot hisoblash bo'yicha)",
+          "• 1. «Дом» toifasi: 195 ta tovar (Eng katta ulush - 20.2%)",
+          "• 2. «Boshqa» toifasi: 184 ta tovar (19.0%)",
+          "• 3. «Аксессуары»: 78 ta tovar (8.1%)",
+          "• 4. «Женщинам»: 65 ta tovar (6.7%)",
+          "• 5. «Автотовары»: 58 ta tovar (6.0%)",
+          "• 6. «Красота»: 53 ta tovar (5.5%)",
+          "• 7. «Мебель»: 31 ta tovar (3.2%)",
+          "• Xulosa: Radar diagrammasi assortimentning 'Дом' va 'Boshqa' yo'nalishlarida kuchli konsentratsiyalashganini radial o'qlar orqali ko'rsatib beradi."
+        ],
+        code: `// Excel Pivot Table Tuzilishi:
+// Qatorlar (Rows): Satr yorliqlari (main_category)
+// Qiymatlar (Values): Hisoblash quyidagidan sku -> COUNT(sku)
+// Umumiy yig'indi: 967 ta mahsulot
+
+// Formula va Funksiyalar:
+=PIVOTTABLE(wb_products_dataset)
+=COUNTIF(Table1[main_category], "Дом")          // Natija: 195
+=COUNTIF(Table1[main_category], "Boshqa")        // Natija: 184
+=COUNTIF(Table1[main_category], "Аксессуары")    // Natija: 78`,
+        file: "excel_1_pivot_radar.png"
+      },
+      'excel_2': {
+        title: "Excel: Mahsulot Toifalari Hajmi va Ulushining Ierarxik Taqsimoti",
+        badge: "Treemap Ierarxiya",
+        badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+        img: "assets/images/excel_2_treemap.png",
+        desc: "Mahsulot toifalari hajmi va ulushining ierarxik taqsimoti (Treemap).",
+        stats: [
+          "• Eng yirik klaster: Nuqta «Дом» — Qiymat: 195 ta tovar",
+          "• 2-o'rindagi maydon: «Boshqa» — 184 ta tovar",
+          "• Muhim toifalar: «Аксессуары» (78), «Женщинам» (65), «Автотовары» (58), «Красота» (53)",
+          "• O'rta segmentlar: «Мебель» (31), «Электроника» (30), «Обувь» (29), «Игрушки» (28)",
+          "• Xulosa: Treemap vizuali barcha 32 ta toifaning umumiy do'kon katalogidagi vizual nisbatini to'g'ri to'rtburchaklar maydoni orqali aniq ifodalaydi."
+        ],
+        code: `// Excel Treemap Diagrammasi:
+// Kategoriya: main_category
+// O'lchov: tovarlar_soni (967 ta SKU)
+// Ierarxiya turi: Ichma-ich joylashgan to'rtburchaklar (Nested Treemap)
+
+Asosiy nuqta: "Дом"
+Maydon qiymati: 195 ta tovar (~20.2%)
+Mutanosiblik: Barcha bloklar yig'indisi = 967 SKU`,
+        file: "excel_2_treemap.png"
+      },
+      'excel_3': {
+        title: "Excel: Wildberries Logistika Punktlarining (PVZ) Hududiy Taqsimoti",
+        badge: "PVZ Sunburst",
+        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
+        img: "assets/images/excel_3_sunburst_pvz.png",
+        desc: "Eng yirik 10 ta hudud bo'yicha Wildberries logistika punktlarining (PVZ) taqsimoti (Sunburst diagrammasi).",
+        stats: [
+          "• 1. г Москва: 942 ta punkt",
+          "• 2. Москва: 637 ta punkt",
+          "• 3. г. Москва: 444 ta punkt (Moskva poytaxt aglomeratsiyasi jami: 2,023 ta PVZ)",
+          "• 4. г Санкт-Петербург: 280 ta punkt",
+          "• 5. Санкт-Петербург: 228 ta punkt (SPb bo'yicha jami: 508 ta PVZ)",
+          "• 6. Краснодарский край: 207 ta punkt",
+          "• 7. Московская область: 188 ta punkt",
+          "• 8. г Краснодар: 176 ta punkt",
+          "• 9. г Ростов-на-Дону: 163 ta punkt",
+          "• 10. г Симферополь: 131 ta punkt",
+          "• Logistika tahlili: PVZ punktlarining asosiy qismi yirik poytaxt va janubiy transport tugunlarida to'plangan."
+        ],
+        code: `// Excel Sunburst / Donut Tahlili (TOP-10 Hudud):
+=SUM(Table_PVZ[PVZ_Soni])
+
+// Hududlar agregatsiyasi:
+г Москва (942) + Москва (637) + г. Москва (444) = 2,023 PVZ
+г Санкт-Петербург (280) + Санкт-Петербург (228) = 508 PVZ
+Krasnodar o'lkasi va shahri (207 + 176) = 383 PVZ
+Moskva viloyati: 188 PVZ
+Rostov-na-Donu: 163 PVZ
+Simferopol: 131 PVZ`,
+        file: "excel_3_sunburst_pvz.png"
       },
       'sql_1': {
         title: "wildberries_products Relyatsion Jadvalini Yaratish (DDL)",
