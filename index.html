@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omonulla Toshpo'latov — Data Analytics & Engineering Portfolio</title>
-  <meta name="description" content="Omonulla Toshpo'latov — Power BI Dashboardlari, Python (Seaborn/Pandas) va PostgreSQL relyatsion ma'lumotlar tahlili portfoliyasi.">
+  <title>Omonulla Toshpo'latov — Wildberries Data Analytics & Engineering Portfolio</title>
+  <meta name="description" content="Omonulla Toshpo'latov — Wildberries mahsulotlari bo'yicha Power BI va PostgreSQL ma'lumotlar tahlili loyihasi portfoliosi.">
 
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,7 +116,7 @@
             </span>
           </div>
           <p class="text-xs text-slate-400 truncate flex items-center gap-2">
-            <span>Power BI</span> • <span>Python (Pandas, Seaborn)</span> • <span>PostgreSQL (Triggerlar)</span>
+            <span>Power BI</span> • <span>PostgreSQL</span> • <span>Wildberries Analytics</span>
           </p>
         </div>
       </div>
@@ -186,7 +186,7 @@
         </div>
         <div class="mt-2">
           <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">967 <span class="text-xs font-normal text-amber-400">SKU</span></div>
-          <div class="text-[11px] text-slate-400 mt-1">Funnel: 368 Byudjet &bull; 298 O'rta-past &bull; 27 Luks</div>
+          <div class="text-[11px] text-slate-400 mt-1">PostgreSQL &bull; COUNT(*) bilan to'liq tekshirilgan</div>
         </div>
       </div>
 
@@ -198,14 +198,14 @@
         </div>
         <div class="mt-2">
           <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">4.70 <span class="text-xs font-normal text-emerald-400">/ 5.00</span></div>
-          <div class="text-[11px] text-emerald-400 mt-1">Power BI Gauge ko'rsatkichi (Yuqori qoniqish)</div>
+          <div class="text-[11px] text-emerald-400 mt-1">Power BI Gauge ko'rsatkichi (Mijozlar ishonchi)</div>
         </div>
       </div>
 
       <!-- KPI 4: Yetakchi Kategoriya & Brend -->
       <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 flex flex-col justify-between hover:border-purple-500/40 transition">
         <div class="flex items-center justify-between text-slate-400 text-xs font-semibold uppercase tracking-wider">
-          <span>Top Brend &amp; Mahsulot</span>
+          <span>Top Brend &amp; Kategoriya</span>
           <i data-lucide="award" class="w-4 h-4 text-purple-400"></i>
         </div>
         <div class="mt-2">
@@ -226,31 +226,24 @@
     <div class="flex items-center justify-between border-b border-slate-800 pb-2 overflow-x-auto">
       <nav class="flex items-center gap-2" role="tablist">
         
-        <!-- Tab 1: Haqiqiy Power BI Dashboardlari (Siz yuborgan rasmlar) -->
+        <!-- Tab 1: Haqiqiy Power BI Dashboardlari -->
         <button id="tab-btn-pbi" onclick="switchTab('pbi')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-bold border-b-2 border-amber-500 text-amber-400 flex items-center gap-2 transition">
           <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
-          <span>1. Power BI Asosiy Dashboardlari</span>
+          <span>1. Power BI Dashboardlari</span>
           <span class="px-1.5 py-0.2 text-[10px] rounded bg-amber-500/20 text-amber-300 font-mono">2 ta Dashboard</span>
         </button>
 
-        <!-- Tab 2: Python / Seaborn Vizualizatsiyasi -->
-        <button id="tab-btn-python" onclick="switchTab('python')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
-          <i data-lucide="line-chart" class="w-4 h-4"></i>
-          <span>2. Python &amp; Seaborn Tahlillari</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded bg-emerald-500/20 text-emerald-300 font-mono">Colab</span>
-        </button>
-
-        <!-- Tab 3: PostgreSQL Baza & Triggerlar -->
+        <!-- Tab 2: PostgreSQL Relyatsion Baza & SQL So'rovlari -->
         <button id="tab-btn-sql" onclick="switchTab('sql')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="database" class="w-4 h-4"></i>
-          <span>3. PostgreSQL Baza &amp; Triggerlar</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded bg-sky-500/20 text-sky-300 font-mono">pgAdmin4</span>
+          <span>2. PostgreSQL Baza &amp; SQL Tahlili</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded bg-sky-500/20 text-sky-300 font-mono">6 ta Bosqich</span>
         </button>
 
-        <!-- Tab 4: Boshlang'ich Excel & Xulosa -->
+        <!-- Tab 3: Boshlang'ich Ma'lumotlar & Loyiha Xulosasi -->
         <button id="tab-btn-data" onclick="switchTab('data')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
-          <span>4. Excel &amp; Xulosa</span>
+          <span>3. Ma'lumotlar Oqimi &amp; Xulosa</span>
         </button>
 
       </nav>
@@ -315,7 +308,7 @@
             </div>
           </div>
 
-          <!-- Ushbu dashboarddagi 5 ta visual bo'yicha tezkor kartalar -->
+          <!-- 5 ta visual bo'yicha tezkor kartalar -->
           <div class="mt-4 grid grid-cols-2 md:grid-cols-5 gap-3 text-xs">
             <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
               <div class="text-slate-400 font-semibold">1. Average of rating</div>
@@ -391,7 +384,7 @@
             </div>
           </div>
 
-          <!-- Ushbu dashboarddagi 4 ta visual bo'yicha tezkor kartalar -->
+          <!-- 4 ta visual bo'yicha tezkor kartalar -->
           <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
             <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
               <div class="text-slate-400 font-semibold">1. Ribbon Chart</div>
@@ -418,381 +411,163 @@
 
 
     <!-- ======================================================================= -->
-    <!-- TAB 2: PYTHON & SEABORN VIZUALIZATSIYALARI (WORD HUJJATIDAN RASMLAR)      -->
-    <!-- ======================================================================= -->
-    <div id="tab-panel-python" class="tab-panel hidden space-y-6">
-      
-      <div class="bg-gradient-to-r from-emerald-950/30 via-slate-900 to-slate-900 border border-emerald-500/30 rounded-2xl p-5 sm:p-6">
-        <div class="space-y-1">
-          <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-            <i data-lucide="code-2" class="w-4 h-4"></i>
-            Word Hujjatidagi Python (Pandas, Matplotlib &amp; Seaborn) Kodlari va Grafikalari
-          </div>
-          <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">
-            Google Colab Muhitida Amalga Oshirilgan EDA Grafikalari
-          </h2>
-          <p class="text-sm text-slate-300 max-w-3xl">
-            Siz taqdim etgan fayldagi asl grafiklar va ularni hosil qilgan haqiqiy Python skriptlari. Har bir kartani bosib, uning to'liq o'lchamli rasmi va kodini tekshirishingiz mumkin.
-          </p>
-        </div>
-      </div>
-
-      <!-- Python Diagrammalar Gridi -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-        <!-- Image 4: Barplot -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img4')">
-          <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Dehqonlar bo'yicha umumiy pul</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">sns.barplot</span>
-            </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image4.png" alt="sns.barplot" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Dehqonlar bo'yicha umumiy pul tushumi (viridis palitrasi, tartiblangan).
-            </p>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>image4.png</span>
-            <span class="flex items-center gap-1 font-semibold">Kodni ko'rish &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Image 5: Line plot -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img5')">
-          <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Kunlar bo'yicha umumiy pul dinamikasi</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">plt.plot</span>
-            </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image5.png" alt="plt.plot" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Kunlar bo'yicha pul o'zgarishi chizig'i (darkorange, marker="o").
-            </p>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>image5.png</span>
-            <span class="flex items-center gap-1 font-semibold">Kodni ko'rish &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Image 6: Histplot -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img6')">
-          <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Yashik og'irligi taqsimoti</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">sns.histplot</span>
-            </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image6.png" alt="sns.histplot" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              15 ta oraliqli gistogramma va KDE ehtimollik zichligi egri chizig'i (steelblue).
-            </p>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>image6.png</span>
-            <span class="flex items-center gap-1 font-semibold">Kodni ko'rish &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Image 7: Scatterplot -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img7')">
-          <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Yashik va Pul o'rtasidagi bog'liqlik</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">sns.scatterplot</span>
-            </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image7.png" alt="sns.scatterplot" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Dehqonlar kesimida rang ajratilgan korrelyatsion nuqtalar buluti (s=80).
-            </p>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>image7.png</span>
-            <span class="flex items-center gap-1 font-semibold">Kodni ko'rish &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Image 8: Boxplot -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img8')">
-          <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Toza mahsulot taqsimoti</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">sns.boxplot</span>
-            </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image8.png" alt="sns.boxplot" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Har bir dehqon bo'yicha toza mahsulot medianasi va kvartillar dispersiyasi (Set2).
-            </p>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>image8.png</span>
-            <span class="flex items-center gap-1 font-semibold">Kodni ko'rish &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Image 9: Pie chart -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img9')">
-          <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Dehqonlar bo'yicha yuk ulushi</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">plt.pie</span>
-            </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image9.png" alt="plt.pie" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Jami yuk hajmida dehqonlarning foiz ulushi (%1.1f%%, pastel palitrasi).
-            </p>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>image9.png</span>
-            <span class="flex items-center gap-1 font-semibold">Kodni ko'rish &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Image 10, 11, 12: Colab PDF Export -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img10')">
-          <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Colab PDF Hisobot 1</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-700 text-slate-300">Colab</span>
-            </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image10.png" alt="Colab 1" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Colab da natijalarni to'liq chop etish va hujjatlashtirish ko'rinishi.
-            </p>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>image10.png</span>
-            <span>Ochish &rarr;</span>
-          </div>
-        </div>
-
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img11')">
-          <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Colab PDF Hisobot 2</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-700 text-slate-300">Colab</span>
-            </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image11.png" alt="Colab 2" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Colab hisobotining davomi: to'liq jadvallar va statistik tahlillar.
-            </p>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>image11.png</span>
-            <span>Ochish &rarr;</span>
-          </div>
-        </div>
-
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img12')">
-          <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Colab PDF Hisobot 3</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-700 text-slate-300">Colab</span>
-            </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image12.png" alt="Colab 3" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Hisobotning yakuniy sahifasi va guruhlash natijalari.
-            </p>
-          </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>image12.png</span>
-            <span>Ochish &rarr;</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- ======================================================================= -->
-    <!-- TAB 3: POSTGRESQL BAZA & TRIGGERLAR (WORD HUJJATIDAN RASMLAR)             -->
+    <!-- TAB 2: POSTGRESQL BAZA & SQL TAHLILI (SIZ YUBORGAN 6 TA HAQIQIY RASM)    -->
     <!-- ======================================================================= -->
     <div id="tab-panel-sql" class="tab-panel hidden space-y-6">
       
-      <div class="bg-gradient-to-r from-sky-950/30 via-slate-900 to-slate-900 border border-sky-500/30 rounded-2xl p-5 sm:p-6">
+      <div class="bg-gradient-to-r from-sky-950/40 via-slate-900 to-slate-900 border border-sky-500/30 rounded-2xl p-5 sm:p-6 shadow-xl">
         <div class="space-y-1">
           <div class="flex items-center gap-2 text-sky-400 text-xs font-bold uppercase tracking-wider">
             <i data-lucide="database" class="w-4 h-4"></i>
-            PostgreSQL 16 &amp; pgAdmin 4 Ma'lumotlar Muhandisligi
+            PostgreSQL 17 &amp; pgAdmin vositasidagi Relyatsion Baza Tahlili
           </div>
           <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">
-            Relyatsion ERD Sxemasi va Avtomatik Hisoblovchi SQL Triggerlar
+            Wildberries Ma'lumotlar Bazasi Strukturasi va SQL Agregatsiya So'rovlari
           </h2>
           <p class="text-sm text-slate-300 max-w-3xl">
-            Word faylingizdagi PostgreSQL arxitekturasi: relyatsion bog'lanishlar, tablelar yaratilishi, import jarayoni va ustunlarning atigi yarmi kiritilsa ham qolganini o'zi avtomatik to'g'irlab hisoblaydigan PL/pgSQL triggerlari.
+            Tozalangan CSV ma'lumotlar to'plamini PostgreSQL muhitida relyatsion jadvalga import qilish, 967 ta yozuvni tekshirish hamda toifalar, narx segmentlari va eng yuqori reytingli tovarlar bo'yicha SQL tahlil so'rovlari natijalari.
           </p>
         </div>
       </div>
 
-      <!-- KATTA PGADMIN4 ERD DIAGRAMMASI (IMAGE30.PNG) -->
-      <div class="visual-card p-4 sm:p-6" onclick="openModalById('img30')">
-        <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
-          <div class="flex items-center gap-2.5">
-            <div class="w-3 h-3 rounded-full bg-sky-400"></div>
-            <h3 class="text-base sm:text-lg font-bold text-white">
-              pgAdmin4 Relyatsion ERD Sxemasi (image30.png)
-            </h3>
-          </div>
-          <span class="text-xs text-sky-400 font-mono">meva / postgres @ PostgreSQL 16</span>
-        </div>
-
-        <div class="img-container bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden flex items-center justify-center p-2 relative group">
-          <img src="assets/images/image30.png" alt="pgAdmin4 ERD Diagram" class="w-full h-auto max-h-[600px] object-contain rounded-lg shadow-2xl">
-          <div class="absolute inset-0 bg-sky-950/20 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <span class="px-4 py-2 rounded-lg bg-slate-900/90 text-white text-xs font-bold border border-sky-500/40 shadow-xl flex items-center gap-2">
-              <i data-lucide="zoom-in" class="w-4 h-4 text-sky-400"></i> To'liq ERD diagrammasini ochish &amp; jadval tuzilishini ko'rish
-            </span>
-          </div>
-        </div>
-
-        <div class="mt-4 grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs font-mono">
-          <div class="bg-slate-900/80 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400">Jadval:</span> <span class="text-sky-300 font-bold">kitob</span></div>
-          <div class="bg-slate-900/80 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400">Jadval:</span> <span class="text-sky-300 font-bold">dehqonlar</span></div>
-          <div class="bg-slate-900/80 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400">Jadval:</span> <span class="text-sky-300 font-bold">mashina</span></div>
-          <div class="bg-slate-900/80 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400">Jadval:</span> <span class="text-sky-300 font-bold">pasrednik</span></div>
-          <div class="bg-slate-900/80 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400">Jadval:</span> <span class="text-sky-300 font-bold">yuk</span></div>
-        </div>
-      </div>
-
-      <!-- SQL TRIGGERLAR VA SINUSHLAR KARTALARI -->
+      <!-- SQL BOSQICHLARI VA SO'ROVLAR GRIDI (SIZNING ASL 6 TA RASMINGIZ) -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         
-        <!-- Image 28: Trigger ishlashi -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img28')">
+        <!-- Rasm 1: CREATE TABLE -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('sql_1')">
           <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Trigger Avtomatik Hisob-kitobi</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400">image28.png</span>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="table" class="w-4 h-4 text-sky-400"></i>
+                Jadval Yaratish (DDL)
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">CREATE TABLE</span>
             </div>
             <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image28.png" alt="SQL Trigger 28" class="w-full h-44 object-contain">
+              <img src="assets/images/sql_1_create_table.png" alt="CREATE TABLE wildberries_products" class="w-full h-44 object-contain">
             </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Ustunga xato qiymat kiritilsa ham tizim avtomatik to'g'irlab, hisob-kitobni aniq bajaradi.
+            <p class="text-xs text-slate-300 italic border-l-2 border-sky-500/60 pl-2.5">
+              "SQL so'rovi yordamida loyiha ma'lumotlariga mos wildberries_products jadvali muvaffaqiyatli shakllantirildi."
             </p>
           </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>SQL Trigger Sinovi</span>
-            <span>Ko'rish &rarr;</span>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
+            <span>wildberries_products</span>
+            <span class="flex items-center gap-1 font-semibold">Kodni ko'rish &rarr;</span>
           </div>
         </div>
 
-        <!-- Image 29: Trigger select -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img29')">
+        <!-- Rasm 2: pgAdmin Import Jarayoni -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('sql_2')">
           <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Trigger Tekshiruvi (SELECT)</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400">image29.png</span>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="upload-cloud" class="w-4 h-4 text-emerald-400"></i>
+                Ma'lumotlar Importi
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">pgAdmin Tool</span>
             </div>
             <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image29.png" alt="SQL Trigger 29" class="w-full h-44 object-contain">
+              <img src="assets/images/sql_2_pgadmin_import.png" alt="pgAdmin Import Jarayoni" class="w-full h-44 object-contain">
             </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Jadvalda mavjud ustunlarning atigi yarmi to'ldirilsa, qolgani o'zi avtomatik hisoblanadi.
+            <p class="text-xs text-slate-300 italic border-l-2 border-emerald-500/60 pl-2.5">
+              "Tozalangan CSV ma'lumotlar to'plami pgAdmin vositasi orqali wildberries_products relyatsion jadvaliga muvaffaqiyatli import qilindi."
             </p>
           </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>Natijalar jadvali</span>
-            <span>Ko'rish &rarr;</span>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
+            <span>Process completed</span>
+            <span class="flex items-center gap-1 font-semibold">Tafsilotlar &rarr;</span>
           </div>
         </div>
 
-        <!-- Image 17: Trigger kodi -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img17')">
+        <!-- Rasm 3: COUNT(*) Verifikatsiyasi -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('sql_3')">
           <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Trigger Funksiyasi Skripti</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400">image17.png</span>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
+                Qatorlar Verifikatsiyasi
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">967 ta yozuv</span>
             </div>
             <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image17.png" alt="Trigger skripti" class="w-full h-44 object-contain">
+              <img src="assets/images/sql_3_count_verify.png" alt="COUNT(*) So'rovi" class="w-full h-44 object-contain">
             </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              PL/pgSQL yordamida kitob jadvali uchun yaratilgan trigger funksiyasi kodi.
+            <p class="text-xs text-slate-300 italic border-l-2 border-amber-500/60 pl-2.5">
+              "COPY buyrug'i yordamida tozalangan ma'lumotlar to'plami wildberries_products relyatsion jadvaliga to'liq (967 ta yozuv) import qilindi va COUNT(*) so'rovi bilan tekshirildi."
             </p>
           </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>CREATE FUNCTION</span>
-            <span>Ko'rish &rarr;</span>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
+            <span>jami_tovarlar: 967</span>
+            <span class="flex items-center gap-1 font-semibold">Ko'rish &rarr;</span>
           </div>
         </div>
 
-        <!-- Image 14: CREATE DATABASE -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img14')">
+        <!-- Rasm 4: 1-so'rov Kategoriya Agregatsiyasi -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('sql_4')">
           <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Baza va Tablelar Yaratish</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400">image14.png</span>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="bar-chart-3" class="w-4 h-4 text-purple-400"></i>
+                1-so'rov: Toifalar Tahlili
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">GROUP BY Toifa</span>
             </div>
             <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image14.png" alt="Baza yaratish" class="w-full h-44 object-contain">
+              <img src="assets/images/sql_4_category_analytics.png" alt="Toifalar bo'yicha tahlil" class="w-full h-44 object-contain">
             </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              PostgreSQL da 'baza' nomli databaza ochish va birlamchi jadvallarni DDL bilan tuzish.
+            <p class="text-xs text-slate-300 italic border-l-2 border-purple-500/60 pl-2.5 line-clamp-3">
+              "1-so'rov: Asosiy mahsulot toifalari bo'yicha tovarlar soni, o'rtacha yakuniy narx va o'rtacha chegirma foizi agregatsiyasi. Natijaga ko'ra, «Дом» va «Boshqa» toifalari yetakchilik qilmoqda, eng yuqori narx «Мебель» toifasiga (41 684.61 rubl) to'g'ri keladi."
             </p>
           </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>CREATE DATABASE</span>
-            <span>Ko'rish &rarr;</span>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
+            <span>Дом (195), Мебель (41.6K)</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
           </div>
         </div>
 
-        <!-- Image 16: COPY import -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img16')">
+        <!-- Rasm 5: 2-so'rov Narx Segmentlari -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('sql_5')">
           <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Ma'lumotlarni Import Qilish</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400">image16.png</span>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="pie-chart" class="w-4 h-4 text-rose-400"></i>
+                2-so'rov: Narx Segmentlari
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">Segment &amp; Sharh</span>
             </div>
             <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image16.png" alt="Data import" class="w-full h-44 object-contain">
+              <img src="assets/images/sql_5_price_segment_reviews.png" alt="Narx segmentlari tahlili" class="w-full h-44 object-contain">
             </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Tozalangan ma'lumotlarni \copy komandasi yordamida psql jadvallariga tezkor o'tkazish.
+            <p class="text-xs text-slate-300 italic border-l-2 border-rose-500/60 pl-2.5 line-clamp-3">
+              "2-so'rov: Narx segmentlari bo'yicha tovarlar soni, o'rtacha narx va umumiy sharhlar soni tahlili. Natija shuni ko'rsatadiki, iste'molchilar faolligi va sharhlar soni asosan «Byudjet (<500)» va «O'rta-past (500-1500)» segmentlarida to'plangan."
             </p>
           </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>\copy data import</span>
-            <span>Ko'rish &rarr;</span>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
+            <span>Byudjet (2.7M sharh)</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
           </div>
         </div>
 
-        <!-- Image 27: Bog'lanishlar -->
-        <div class="visual-card p-4 flex flex-col justify-between" onclick="openModalById('img27')">
+        <!-- Rasm 6: 3-so'rov TOP-10 Tovar -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('sql_6')">
           <div>
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-              <span class="text-xs font-bold text-white">Foreign Key &amp; Bog'lanishlar</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400">image27.png</span>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="star" class="w-4 h-4 text-amber-400"></i>
+                3-so'rov: TOP-10 Reyting
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">5.00 &amp; 4.90 Reyting</span>
             </div>
             <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3">
-              <img src="assets/images/image27.png" alt="Bog'lanishlar" class="w-full h-44 object-contain">
+              <img src="assets/images/sql_6_top_rated_products.png" alt="TOP-10 Mahsulotlar" class="w-full h-44 object-contain">
             </div>
-            <p class="text-xs text-slate-300 line-clamp-2">
-              Jadvallar o'rtasida munosabatlarni o'rnatish, ma'lumotlar yaxlitligini (integrity) ta'minlash.
+            <p class="text-xs text-slate-300 italic border-l-2 border-amber-500/60 pl-2.5 line-clamp-3">
+              "3-so'rov: Kamida 1000 ta sharhga ega bo'lgan eng yuqori reytingli TOP-10 tovarlar tahlili. Natijalar sifat ko'rsatkichi va xaridorlar ishonchi yuqori bo'lgan yetakchi mahsulotlar hamda brendlarni aniqlash imkonini beradi."
             </p>
           </div>
-          <div class="mt-3 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
-            <span>REFERENCES &amp; FK</span>
-            <span>Ko'rish &rarr;</span>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
+            <span>UZcotton &bull; Лорд Издат</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
           </div>
         </div>
 
@@ -802,63 +577,71 @@
 
 
     <!-- ======================================================================= -->
-    <!-- TAB 4: BOSHLANG'ICH EXCEL & ARXITEKTURA XULOSASI                         -->
+    <!-- TAB 3: MA'LUMOTLAR OQIMI & LOYIHA XULOSASI                              -->
     <!-- ======================================================================= -->
     <div id="tab-panel-data" class="tab-panel hidden space-y-6">
       
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 space-y-4">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2">
-          <i data-lucide="layers" class="w-5 h-5 text-sky-400"></i>
-          Boshlang'ich Ma'lumotlar va Loyiha Arxitekturasi
-        </h3>
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 space-y-5">
+        <div class="space-y-1">
+          <div class="text-sky-400 text-xs font-bold uppercase tracking-wider">Arxitektura va Bosqichlar</div>
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i data-lucide="git-branch" class="w-5 h-5 text-sky-400"></i>
+            Wildberries Ma'lumotlar Tahlili Quvuri (Pipeline)
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Loyiha xom CSV ma'lumotlaridan boshlab, PostgreSQL relyatsion bazasida saqlash, SQL so'rovlari orqali agregatsiyalash va Power BI orqali interaktiv vizuallashtirishgacha bo'lgan to'liq tsiklni qamrab oladi.
+          </p>
+        </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
           
-          <!-- Image 1: Boshlang'ich Excel Jadvali -->
-          <div class="visual-card p-4" onclick="openModalById('img1')">
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-xs">
-              <span class="font-bold text-white">Boshlang'ich Excel Fayli (image1.png)</span>
-              <span class="text-sky-400 font-mono">Excel Table</span>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-sky-400">
+              <span class="w-6 h-6 rounded-full bg-sky-500/20 flex items-center justify-center text-xs">1</span>
+              Ma'lumotlarni Tozalash &amp; DDL
             </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-2">
-              <img src="assets/images/image1.png" alt="Boshlang'ich Excel" class="w-full h-44 object-contain">
-            </div>
-            <p class="text-xs text-slate-300">
-              Sana, Mashina, Haydovchi, Pasrednik, Dehqon, Pul, Mahsulot, Yashik, Yuk, Toza ustunlari bilan xom ko'rinish.
+            <p class="text-slate-300">
+              CSV fayli tekshirilib, tozalangan formatda PostgreSQL 17 dagi <code class="text-sky-300">wildberries_products</code> jadvaliga yuklandi. 967 ta qator COUNT(*) orqali verifikatsiya qilindi.
             </p>
           </div>
 
-          <!-- Image 13: Pasrednik_id qo'shilgan ko'rinish -->
-          <div class="visual-card p-4" onclick="openModalById('img13')">
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-xs">
-              <span class="font-bold text-white">PostgreSQL uchun Normalizatsiya (image13.png)</span>
-              <span class="text-sky-400 font-mono">Normalized</span>
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-amber-400">
+              <span class="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center text-xs">2</span>
+              SQL Analitik So'rovlar
             </div>
-            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-2">
-              <img src="assets/images/image13.png" alt="Normalizatsiya" class="w-full h-44 object-contain">
+            <p class="text-slate-300">
+              Toifalar bo'yicha narx va chegirma taqsimoti, narx segmentlari bo'yicha 6.5 mln sharh agregatsiyasi hamda 1000+ sharhga ega TOP-10 sifatli tovarlar tahlil qilindi.
+            </p>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-purple-400">
+              <span class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-xs">3</span>
+              Power BI Interaktiv Dashboardlari
             </div>
-            <p class="text-xs text-slate-300">
-              Relyatsion bazaga yuklash uchun pasrednik_id kaliti qo'shilgan va ustunlar ajratilgan holat.
+            <p class="text-slate-300">
+              PostgreSQL ma'lumotlari asosida 2 ta to'liq dashboard tuzildi: Sharhlar va Dekompozitsiya daraxti (Decomposition Tree) hamda Narx segmentatsiyasi va SKU voronkasi (Funnel).
             </p>
           </div>
 
         </div>
 
-        <!-- Muallifning Hujjatdagi Yakuniy Xulosasi (So'zma-so'z) -->
-        <div class="mt-6 bg-slate-950 border border-slate-800 rounded-xl p-5 space-y-3">
+        <!-- Loyiha Yakuniy Xulosasi -->
+        <div class="mt-4 bg-slate-950 border border-slate-800 rounded-xl p-5 space-y-3">
           <div class="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase">
-            <i data-lucide="quote" class="w-4 h-4"></i>
-            Muallifning Hujjatdagi Yakuniy So'zi (Original Matn)
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            Asosiy Biznes Xulosalari
           </div>
-          <div class="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-2 border-l-2 border-amber-500/50 pl-4 italic">
+          <div class="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-2 border-l-2 border-amber-500/60 pl-4">
             <p>
-              "Bu aslida bir martalik ish bo'lmasligi kerak edi. Men NocoDB ga PostgreSQL ni ulamoqchi edim va PostgreSQL ni Power BI ga, bu kichik narsa ma'lumotlarni oson kiritish, PostgreSQL da saqlash va Power BI da doimiy ravishda kuzatib borish imkonini berishi kerak edi."
+              • <strong>Iste'molchilar xulq-atvori:</strong> Iste'molchilarning eng yuqori faolligi va sharhlarining asosiy qismi (3.74 mln dan ortiq sharh) «Byudjet (<500)» va «O'rta-past (500-1500)» segmentlariga to'g'ri keladi.
             </p>
             <p>
-              "Lekin ba'zi sabablarga ko'ra Power BI ga EduMail kabi mail kerak, NocoDB da esa hali server tayyormas. Lekin PostgreSQL dagi trigger funksiyalar juda yaxshi ishlayapti va jadvalda mavjud ustunlarning atigi yarmi hatto kamrog'i to'ldirilsa, qolgani o'zi avtomatik bajarilyapti."
+              • <strong>Yetakchi toifalar:</strong> «Дом» (195 tovar) va «Boshqa» (184 tovar) assortiment soni bo'yicha yetakchi, «Мебель» toifasi esa eng yuqori o'rtacha narxga (41 684.61 rubl) ega.
             </p>
             <p>
-              "Keyinchalik NocoDB dagi server tugasa va menga kerakli emailni olsam, bu kichik sistema doimiy yaxshi ishlashni boshlaydi. Keyinchalik buni yana-da kuchaytirib borish mumkin."
+              • <strong>Brendlar ishonchi:</strong> UZcotton brendi 4.8 milliondan ortiq sharh va 4.90 barqaror reyting bilan katalogdagi mutlaq yetakchi hisoblanadi.
             </p>
           </div>
         </div>
@@ -876,9 +659,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
       
       <div class="text-center md:text-left">
-        <h4 class="text-sm font-bold text-white">Omonulla Toshpo'latov — Data Portfolio</h4>
+        <h4 class="text-sm font-bold text-white">Omonulla Toshpo'latov — Wildberries Analytics Portfolio</h4>
         <p class="text-xs text-slate-400 mt-1">
-          Barcha tahlillar, hisob-kitoblar va vizuallar haqiqiy loyiha fayllariga 100% mos keladi.
+          Barcha tahlillar, SQL so'rovlari va Power BI diagrammalari haqiqiy loyiha fayllariga 100% mos keladi.
         </p>
       </div>
 
@@ -945,9 +728,9 @@
           
           <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-2">
             <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-              <i data-lucide="info" class="w-4 h-4 text-sky-400"></i> Tahliliy Mazmuni &amp; Ko'rsatkichlar
+              <i data-lucide="info" class="w-4 h-4 text-sky-400"></i> Hujjatdagi Asl Sharh &amp; Tahlil
             </h4>
-            <div id="modal-desc" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <div id="modal-desc" class="text-xs sm:text-sm text-slate-300 leading-relaxed italic border-l-2 border-sky-500/60 pl-3">
               <!-- JS to'ldiradi -->
             </div>
             <div id="modal-stats" class="pt-2 border-t border-slate-800 space-y-1 font-mono text-xs">
@@ -957,7 +740,7 @@
 
           <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-2">
             <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-              <i data-lucide="terminal" class="w-4 h-4 text-emerald-400"></i> Skript / Formula / Ko'rsatkich
+              <i data-lucide="terminal" class="w-4 h-4 text-emerald-400"></i> SQL Skript / Formula
             </h4>
             <pre id="modal-code" class="p-3 bg-slate-950 border border-slate-800 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto custom-scrollbar max-h-48"></pre>
           </div>
@@ -968,7 +751,7 @@
 
       <!-- Modal Footer -->
       <div class="px-5 py-3 border-t border-slate-800 bg-slate-900/90 flex items-center justify-between text-xs text-slate-400 shrink-0">
-        <span id="modal-footer-file" class="font-mono text-sky-400">Manba: Power BI</span>
+        <span id="modal-footer-file" class="font-mono text-sky-400">Manba: PostgreSQL 17</span>
         <button onclick="closeModal()" class="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-semibold transition">
           Yopish
         </button>
@@ -985,7 +768,7 @@
     function switchTab(tabId) {
       document.querySelectorAll('.tab-panel').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('border-amber-500', 'text-amber-400', 'border-emerald-500', 'text-emerald-400', 'border-sky-500', 'text-sky-400', 'font-bold');
+        btn.classList.remove('border-amber-500', 'text-amber-400', 'border-sky-500', 'text-sky-400', 'font-bold');
         btn.classList.add('border-transparent', 'text-slate-400', 'font-medium');
       });
 
@@ -997,8 +780,6 @@
         activeBtn.classList.remove('border-transparent', 'text-slate-400', 'font-medium');
         activeBtn.classList.add('font-bold');
         if (tabId === 'pbi') activeBtn.classList.add('border-amber-500', 'text-amber-400');
-        else if (tabId === 'python') activeBtn.classList.add('border-emerald-500', 'text-emerald-400');
-        else if (tabId === 'sql') activeBtn.classList.add('border-sky-500', 'text-sky-400');
         else activeBtn.classList.add('border-sky-500', 'text-sky-400');
       }
     }
@@ -1056,316 +837,145 @@ Price_Category = SWITCH(
 )`,
         file: "powerbi_pricing_funnel_dashboard.png"
       },
-      'img4': {
-        title: "Dehqonlar bo'yicha umumiy pul (sns.barplot)",
-        badge: "Python Seaborn",
-        badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-        img: "assets/images/image4.png",
-        desc: "Har bir dehqon tomonidan olingan umumiy pul tushumi bo'yicha saralangan barplot. Viridis ranglar palitrasi orqali yetakchi dehqonlar ajratib ko'rsatilgan.",
-        stats: [
-          "• Kutubxonalar: pandas, matplotlib.pyplot, seaborn",
-          "• X-o'qi: Dehqon (45 gradus burchak ostida)",
-          "• Y-o'qi: Umumiy pul (so'm)",
-          "• Natija: Nazrullo dehqon eng yuqori tushumni ta'minlagan"
-        ],
-        code: `plt.figure(figsize=(9, 5))
-umumiy_pul = df.groupby("dehqon")["pul"].sum().sort_values(ascending=False)
-sns.barplot(x=umumiy_pul.index, y=umumiy_pul.values, hue=umumiy_pul.index,
-            palette="viridis", legend=False)
-plt.title("Dehqonlar bo'yicha umumiy pul")
-plt.xlabel("Dehqon")
-plt.ylabel("Umumiy pul (so'm)")
-plt.xticks(rotation=45, ha="right")
-plt.tight_layout()
-plt.show()`,
-        file: "image4.png"
-      },
-      'img5': {
-        title: "Kunlar bo'yicha umumiy pul dinamikasi",
-        badge: "Python Matplotlib",
-        badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
-        img: "assets/images/image5.png",
-        desc: "Yetkazib berilgan kunlar (sana) bo'yicha umumiy pulning o'zgarish dinamikasi chizig'i.",
-        stats: [
-          "• X-o'qi: Sana",
-          "• Y-o'qi: Pul (so'm)",
-          "• Rang: darkorange, marker='o'",
-          "• Xulosa: Kunlik pul aylanmasi oqimi"
-        ],
-        code: `plt.figure(figsize=(9, 5))
-pul_by_date = df.groupby("sana")["pul"].sum().sort_index()
-plt.plot(pul_by_date.index, pul_by_date.values, marker="o", color="darkorange")
-plt.title("Kunlar bo'yicha umumiy pul dinamikasi")
-plt.xlabel("Sana")
-plt.ylabel("Pul (so'm)")
-plt.xticks(rotation=45, ha="right")
-plt.tight_layout()
-plt.show()`,
-        file: "image5.png"
-      },
-      'img6': {
-        title: "Yashik og'irligi taqsimoti (Gistogramma & KDE)",
-        badge: "Python Seaborn",
+      'sql_1': {
+        title: "wildberries_products Relyatsion Jadvalini Yaratish (DDL)",
+        badge: "CREATE TABLE",
         badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        img: "assets/images/image6.png",
-        desc: "Yashik og'irligining chastota taqsimoti. 15 ta oraliqqa bo'lingan va silliq zichlik egri chizig'i (kde=True) chizilgan.",
+        img: "assets/images/sql_1_create_table.png",
+        desc: "SQL so'rovi yordamida loyiha ma'lumotlariga mos wildberries_products jadvali muvaffaqiyatli shakllantirildi.",
         stats: [
-          "• X-o'qi: Yashik (kg)",
-          "• Y-o'qi: Chastota",
-          "• Rang: steelblue",
-          "• Xulosa: Tara og'irligi chastotasi"
+          "• Baza: wildberries_db (PostgreSQL 17)",
+          "• Asosiy kalit (PK): sku BIGINT PRIMARY KEY",
+          "• Ustunlar soni: 11 ta maydon (name, brand, main_category, initial_price, final_price, discount_amount, discount_percent, price_segment, rating, review_count)",
+          "• Ma'lumot turlari: BIGINT, TEXT, VARCHAR(255), NUMERIC(12,2), NUMERIC(5,2), INT"
         ],
-        code: `plt.figure(figsize=(9, 5))
-sns.histplot(df["yashik"], bins=15, kde=True, color="steelblue")
-plt.title("Yashik og'irligi taqsimoti")
-plt.xlabel("Yashik (kg)")
-plt.ylabel("Chastota")
-plt.tight_layout()
-plt.show()`,
-        file: "image6.png"
-      },
-      'img7': {
-        title: "Yashik og'irligi va Pul o'rtasidagi bog'liqlik",
-        badge: "Python Seaborn",
-        badgeColor: "bg-purple-500/20 text-purple-300 border-purple-500/30",
-        img: "assets/images/image7.png",
-        desc: "Yashik (tara) va pul summasining bog'liqligi scatterplot nuqtalarida tasvirlangan.",
-        stats: [
-          "• X-o'qi: Yashik (kg)",
-          "• Y-o'qi: Pul (so'm)",
-          "• Hue: dehqon (har bir dehqon alohida klasterda)",
-          "• Nuqta o'lchami: s=80"
-        ],
-        code: `plt.figure(figsize=(9, 5))
-sns.scatterplot(data=df, x="yashik", y="pul", hue="dehqon", s=80)
-plt.title("Yashik og'irligi va Pul o'rtasidagi bog'liqlik")
-plt.xlabel("Yashik (kg)")
-plt.ylabel("Pul (so'm)")
-plt.legend(bbox_to_anchor=(1.02, 1), loc="upper left")
-plt.tight_layout()
-plt.show()`,
-        file: "image7.png"
-      },
-      'img8': {
-        title: "Dehqonlar bo'yicha toza mahsulot taqsimoti",
-        badge: "Python Boxplot",
-        badgeColor: "bg-rose-500/20 text-rose-300 border-rose-500/30",
-        img: "assets/images/image8.png",
-        desc: "Har bir dehqon partiyalaridagi toza mahsulot og'irligining dispersiyasi, medianasi va kvartillar oraliqlari tahlili.",
-        stats: [
-          "• Vizual: sns.boxplot",
-          "• X-o'qi: Dehqon",
-          "• Y-o'qi: Toza (kg)",
-          "• Palitra: Set2"
-        ],
-        code: `plt.figure(figsize=(9, 5))
-sns.boxplot(data=df, x="dehqon", y="toza", hue="dehqon", palette="Set2", legend=False)
-plt.title("Dehqonlar bo'yicha toza mahsulot taqsimoti")
-plt.xlabel("Dehqon")
-plt.ylabel("Toza (kg)")
-plt.xticks(rotation=45, ha="right")
-plt.tight_layout()
-plt.show()`,
-        file: "image8.png"
-      },
-      'img9': {
-        title: "Dehqonlar bo'yicha yuk ulushi",
-        badge: "Python Pie Chart",
-        badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
-        img: "assets/images/image9.png",
-        desc: "Jami yetkazib berilgan yuk hajmida dehqonlarning foiz ulushi doiraviy diagrammada ko'rsatilgan.",
-        stats: [
-          "• Format: %1.1f%%",
-          "• Boshlang'ich burchak: startangle=90",
-          "• Ranglar: sns.color_palette('pastel')"
-        ],
-        code: `plt.figure(figsize=(7, 7))
-yuk_by_dehqon = df.groupby("dehqon")["yuk"].sum()
-plt.pie(yuk_by_dehqon.values, labels=yuk_by_dehqon.index, autopct="%1.1f%%",
-        startangle=90, colors=sns.color_palette("pastel"))
-plt.title("Dehqonlar bo'yicha yuk ulushi")
-plt.tight_layout()
-plt.show()`,
-        file: "image9.png"
-      },
-      'img10': {
-        title: "Google Colab Tahlil Hisoboti Sahifa 1",
-        badge: "Colab PDF Export",
-        badgeColor: "bg-slate-700 text-slate-300",
-        img: "assets/images/image10.png",
-        desc: "Google Colab muhitidan to'g'ridan-to'g'ri olingan tahliliy hisobotning birinchi sahifasi.",
-        stats: ["• Colab bosma sahifasi", "• Dastlabki statistik umumlashtirish"],
-        code: `# Google Colab muhitida natijalarni chop etish`,
-        file: "image10.png"
-      },
-      'img11': {
-        title: "Google Colab Tahlil Hisoboti Sahifa 2",
-        badge: "Colab PDF Export",
-        badgeColor: "bg-slate-700 text-slate-300",
-        img: "assets/images/image11.png",
-        desc: "Google Colab hisobotining davomi: to'liq jadvallar va statistik tahlillar.",
-        stats: ["• Guruhlangan natijalar", "• Dispersiya ko'rsatkichlari"],
-        code: `# Colab orqali hisobot chiqarish`,
-        file: "image11.png"
-      },
-      'img12': {
-        title: "Google Colab Tahlil Hisoboti Sahifa 3",
-        badge: "Colab PDF Export",
-        badgeColor: "bg-slate-700 text-slate-300",
-        img: "assets/images/image12.png",
-        desc: "Google Colab hisobotining yakuniy sahifasi va guruhlash natijalari.",
-        stats: ["• Yakuniy grafiklar", "• Xulosa"],
-        code: `# Colab hisobot yakuni`,
-        file: "image12.png"
-      },
-      'img30': {
-        title: "pgAdmin4 Relyatsion ERD Sxemasi",
-        badge: "PostgreSQL 16 Schema",
-        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        img: "assets/images/image30.png",
-        desc: "meva/postgres@PostgreSQL 16 bazasidagi relyatsion jadvallar: kitob, dehqonlar, mashina, pasrednik, yuk. Barcha jadvallar Primary Key va Foreign Key bog'lanishlari orqali normallashtirilgan.",
-        stats: [
-          "• Baza nomi: baza (meva / postgres)",
-          "• Asosiy jadval: kitob (id, sana, mashina_id, dehqon_id, pasrednik_id, yuk, yashik, toza, pul)",
-          "• Bog'liq jadvallar: dehqonlar(id, dehqon), mashina(id, mashina, haydovchi), pasrednik(id, pasrednik)",
-          "• Xususiyati: To'liq relyatsion bog'liqlik va kaskadli yaxlitlik"
-        ],
-        code: `-- PostgreSQL Relyatsion Jadvallar DDL
-CREATE TABLE dehqonlar (
-    id SERIAL PRIMARY KEY,
-    dehqon VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE mashina (
-    id SERIAL PRIMARY KEY,
-    mashina VARCHAR(50),
-    haydovchi VARCHAR(100)
-);
-
-CREATE TABLE kitob (
-    id SERIAL PRIMARY KEY,
-    sana DATE,
-    mashina_id INT REFERENCES mashina(id),
-    dehqon_id INT REFERENCES dehqonlar(id),
-    pasrednik_id INT REFERENCES pasrednik(id),
-    yuk NUMERIC,
-    yashik NUMERIC,
-    toza NUMERIC,
-    pul NUMERIC
+        code: `CREATE TABLE wildberries_products (
+    sku BIGINT PRIMARY KEY,
+    name TEXT,
+    brand VARCHAR(255),
+    main_category VARCHAR(255),
+    initial_price NUMERIC(12, 2),
+    final_price NUMERIC(12, 2),
+    discount_amount NUMERIC(12, 2),
+    discount_percent NUMERIC(5, 2),
+    price_segment VARCHAR(100),
+    rating NUMERIC(3, 2),
+    review_count INT
 );`,
-        file: "image30.png"
+        file: "sql_1_create_table.png"
       },
-      'img14': {
-        title: "PostgreSQL Baza va Jadvallar Yaratish",
-        badge: "PostgreSQL DDL",
-        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        img: "assets/images/image14.png",
-        desc: "PostgreSQL da 'baza' nomli yangi databaza yaratish va birlamchi jadvallarni hosil qilish skripti.",
-        stats: ["• CREATE DATABASE baza;", "• 4 ta asosiy jadval yaratildi"],
-        code: `CREATE DATABASE baza;
-CREATE TABLE kitob (...);
-CREATE TABLE dehqonlar (...);`,
-        file: "image14.png"
-      },
-      'img16': {
-        title: "Ma'lumotlarni PostgreSQL ga Import Qilish",
-        badge: "PostgreSQL COPY",
-        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        img: "assets/images/image16.png",
-        desc: "Tozalangan ma'lumotlar to'plamini \\copy buyrug'i orqali tezkor bazaga yuklash jarayoni.",
-        stats: ["• Barcha qatorlar muvaffaqiyatli yuklandi"],
-        code: `\\copy kitob FROM 'path/to/data.csv' WITH (FORMAT csv, HEADER true);`,
-        file: "image16.png"
-      },
-      'img17': {
-        title: "Avtomatlashtirilgan Trigger Funksiyasi Kodi",
-        badge: "PL/pgSQL Trigger",
-        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        img: "assets/images/image17.png",
-        desc: "Kitob jadvali uchun yaratilgan trigger funksiyasi. Agar foydalanuvchi toza vazn yoki pul ustunini kiritmasa yoxud xato kiritsa, funksiya formula asosida o'zi avtomatik to'g'irlaydi.",
-        stats: [
-          "• Funksiya: hisobla_kitob()",
-          "• Hodisa: BEFORE INSERT OR UPDATE",
-          "• Formula: NEW.toza = NEW.yuk - NEW.yashik;",
-          "• Formula: NEW.pul = NEW.toza * NEW.ortacha;"
-        ],
-        code: `CREATE OR REPLACE FUNCTION hisobla_kitob()
-RETURNS TRIGGER AS $$
-BEGIN
-    NEW.toza := COALESCE(NEW.yuk, 0) - COALESCE(NEW.yashik, 0);
-    IF NEW.pul IS NULL OR NEW.pul = 0 THEN
-        NEW.pul := NEW.toza * NEW.ortacha;
-    END IF;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER trg_kitob_hisobla
-BEFORE INSERT OR UPDATE ON kitob
-FOR EACH ROW
-EXECUTE FUNCTION hisobla_kitob();`,
-        file: "image17.png"
-      },
-      'img27': {
-        title: "Jadvallarni Bir-biriga Bog'lash (Foreign Keys)",
-        badge: "PostgreSQL Constraints",
-        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        img: "assets/images/image27.png",
-        desc: "Barcha jadvallar o'rtasida munosabatlarni o'rnatish skripti.",
-        stats: ["• FOREIGN KEY (dehqon_id) REFERENCES dehqonlar(id)"],
-        code: `ALTER TABLE kitob
-ADD CONSTRAINT fk_dehqon FOREIGN KEY (dehqon_id) REFERENCES dehqonlar(id);`,
-        file: "image27.png"
-      },
-      'img28': {
-        title: "Triggerning Avtomatik Hisob-kitobi Sinovi",
-        badge: "Trigger Test & Verification",
-        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        img: "assets/images/image28.png",
-        desc: "Jadvalga ma'lumot kiritilganda ustunlarning atigi yarmi to'ldirilsa ham, trigger qolgan barcha ko'rsatkichlarni o'zi aniq hisoblab to'ldirganligi ko'rsatilgan.",
-        stats: [
-          "• Kiruvchi: yuk, yashik, ortacha",
-          "• Avtomatik hisoblangan: toza, pul",
-          "• Natija: Inson xatosi 0 ga tushirildi"
-        ],
-        code: `-- Sinov INSERT komandasi (kam ustun kiritilgan)
-INSERT INTO kitob (sana, dehqon_id, yuk, yashik)
-VALUES ('2024-08-15', 1, 1500, 120);
-
--- Trigger toza va pulni o'zi avtomatik to'g'irladi!`,
-        file: "image28.png"
-      },
-      'img29': {
-        title: "Trigger Natijalarini SELECT Orqali Tekshirish",
-        badge: "Query Verification",
-        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        img: "assets/images/image29.png",
-        desc: "SELECT so'rovi orqali barcha qatorlar tekshirilganda, barcha hisob-kitoblar to'liq va nuqsonsiz shakllanganligi isbotlangan.",
-        stats: ["• Xato kiritilgan qiymatlar avtomatik tuzatildi"],
-        code: `SELECT k.id, k.sana, d.dehqon, k.yuk, k.yashik, k.toza, k.pul
-FROM kitob k
-JOIN dehqonlar d ON k.dehqon_id = d.id;`,
-        file: "image29.png"
-      },
-      'img1': {
-        title: "Boshlang'ich Excel Ma'lumotlar Fayli",
-        badge: "Excel Dataset",
+      'sql_2': {
+        title: "Tozalangan CSV Ma'lumotlarini pgAdmin Orqali Import Qilish",
+        badge: "pgAdmin Process",
         badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-        img: "assets/images/image1.png",
-        desc: "Loyihaning dastlabki xom ma'lumotlar jadvali.",
-        stats: ["• Xom ma'lumotlar formati"],
-        code: `# Excel ustunlari: sana, mashina, haydovchi, pasrednik, dehqon, pul, yashik, toza`,
-        file: "image1.png"
+        img: "assets/images/sql_2_pgadmin_import.png",
+        desc: "Tozalangan CSV ma'lumotlar to'plami pgAdmin vositasi orqali wildberries_products relyatsion jadvaliga muvaffaqiyatli import qilindi.",
+        stats: [
+          "• Server: PostgreSQL 17 (localhost:5432)",
+          "• Databaza: wildberries_db",
+          "• Jadval: public.wildberries_products",
+          "• Holat: Process completed (Muvaffaqiyatli yakunlandi)"
+        ],
+        code: `-- pgAdmin GUI Import / COPY Jarayoni:
+COPY public.wildberries_products 
+FROM 'C:/path/to/wildberries_cleaned_data.csv' 
+WITH (FORMAT csv, HEADER true, DELIMITER ',');`,
+        file: "sql_2_pgadmin_import.png"
       },
-      'img13': {
-        title: "Normalizatsiya Qilingan Ma'lumotlar Ko'rinishi",
-        badge: "Normalized Schema",
-        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
-        img: "assets/images/image13.png",
-        desc: "Excel faylidan umumiy pul ustunini psql da trigger orqali boshqarish uchun olib tashlangan va pasrednik_id qo'shilgan holati.",
-        stats: ["• pasrednik_id qo'shildi"],
-        code: `# psql ga yuklashdan oldingi tayyorgarlik`,
-        file: "image13.png"
+      'sql_3': {
+        title: "Import Qilingan Ma'lumotlar Sonini Tekshirish (COUNT)",
+        badge: "COUNT(*) Verifikatsiya",
+        badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+        img: "assets/images/sql_3_count_verify.png",
+        desc: "COPY buyrug'i yordamida tozalangan ma'lumotlar to'plami wildberries_products relyatsion jadvaliga to'liq (967 ta yozuv) import qilindi va COUNT(*) so'rovi bilan tekshirildi.",
+        stats: [
+          "• So'rov: SELECT COUNT(*) AS jami_tovarlar FROM wildberries_products;",
+          "• Natija: 967 ta qator (bigint)",
+          "• Xulosa: CSV fayldagi barcha tovarlar xatosiz to'liq bazaga o'tganligi isbotlandi"
+        ],
+        code: `SELECT COUNT(*) AS jami_tovarlar 
+FROM wildberries_products;
+
+-- Natija: 967`,
+        file: "sql_3_count_verify.png"
+      },
+      'sql_4': {
+        title: "1-so'rov: Asosiy Mahsulot Toifalari Agregatsiyasi (TOP-10 Toifalar)",
+        badge: "1-so'rov (Toifalar)",
+        badgeColor: "bg-purple-500/20 text-purple-300 border-purple-500/30",
+        img: "assets/images/sql_4_category_analytics.png",
+        desc: "1-so'rov: Asosiy mahsulot toifalari bo'yicha tovarlar soni, o'rtacha yakuniy narx va o'rtacha chegirma foizi agregatsiyasi. Natijaga ko'ra, «Дом» va «Boshqa» toifalari assortiment hajmi bo'yicha yetakchilik qilmoqda, eng yuqori o'rtacha narx esa «Мебель» toifasiga (41 684.61 rubl) to'g'ri keladi.",
+        stats: [
+          "• 1. Дом: 195 tovar | Narx: 1,411.66 rubl | Chegirma: 55.07%",
+          "• 2. Boshqa: 184 tovar | Narx: 1,362.10 rubl | Chegirma: 58.44%",
+          "• 3. Аксессуары: 78 tovar | Narx: 1,800.94 rubl | Chegirma: 68.55%",
+          "• 4. Женщинам: 65 tovar | Narx: 1,454.58 rubl | Chegirma: 71.06%",
+          "• 5. Автотовары: 58 tovar | Narx: 3,255.71 rubl | Chegirma: 31.57%",
+          "• 6. Красота: 53 tovar | Narx: 573.91 rubl | Chegirma: 58.75%",
+          "• 7. Мебель: 31 tovar | Narx: 41,684.61 rubl | Chegirma: 51.46%",
+          "• 8. Электроника: 30 tovar | Narx: 2,380.40 rubl | Chegirma: 57.01%",
+          "• 9. Обувь: 29 tovar | Narx: 1,714.72 rubl | Chegirma: 72.56%",
+          "• 10. Игрушки: 28 tovar | Narx: 743.86 rubl | Chegirma: 58.06%"
+        ],
+        code: `SELECT
+    main_category AS toifa,
+    COUNT(*) AS tovarlar_soni,
+    ROUND(AVG(final_price), 2) AS ortacha_narx,
+    ROUND(AVG(discount_percent), 2) AS ortacha_chegirma
+FROM wildberries_products
+GROUP BY main_category
+ORDER BY tovarlar_soni DESC
+LIMIT 10;`,
+        file: "sql_4_category_analytics.png"
+      },
+      'sql_5': {
+        title: "2-so'rov: Narx Segmentlari, O'rtacha Narx va Umumiy Sharhlar Soni",
+        badge: "2-so'rov (Segmentlar)",
+        badgeColor: "bg-rose-500/20 text-rose-300 border-rose-500/30",
+        img: "assets/images/sql_5_price_segment_reviews.png",
+        desc: "2-so'rov: Narx segmentlari bo'yicha tovarlar soni, o'rtacha narx va umumiy sharhlar soni tahlili. Natija shuni ko'rsatadiki, iste'molchilar faolligi va sharhlar soni asosan «Byudjet (<500)» va «O'rta-past (500-1500)» segmentlarida to'plangan.",
+        stats: [
+          "• Byudjet (<500): 368 tovar | O'rtacha narx: 338.72 | Jami sharhlar: 2,744,988",
+          "• O'rta-past (500-1500): 298 tovar | O'rtacha narx: 862.31 | Jami sharhlar: 1,002,303",
+          "• O'rta (1500-5000): 178 tovar | O'rtacha narx: 2,517.26 | Jami sharhlar: 298,478",
+          "• Premium (5000-15000): 62 tovar | O'rtacha narx: 7,919.92 | Jami sharhlar: 27,841",
+          "• [null]: 34 tovar | O'rtacha narx: 0.00 | Jami sharhlar: 2,438,325",
+          "• Luks (>15000): 27 tovar | O'rtacha narx: 54,321.59 | Jami sharhlar: 101"
+        ],
+        code: `SELECT
+    price_segment AS narx_segmenti,
+    COUNT(*) AS tovarlar_soni,
+    ROUND(AVG(final_price), 2) AS ortacha_narx,
+    SUM(review_count) AS jami_sharhlar
+FROM wildberries_products
+GROUP BY price_segment
+ORDER BY tovarlar_soni DESC;`,
+        file: "sql_5_price_segment_reviews.png"
+      },
+      'sql_6': {
+        title: "3-so'rov: 1000+ Sharhga Ega TOP-10 Eng Yuqori Reytingli Tovarlar",
+        badge: "3-so'rov (TOP-10 Reyting)",
+        badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+        img: "assets/images/sql_6_top_rated_products.png",
+        desc: "3-so'rov: Kamida 1000 ta sharhga ega bo'lgan eng yuqori reytingli TOP-10 tovarlar tahlili. Natijalar sifat ko'rsatkichi va xaridorlar ishonchi yuqori bo'lgan yetakchi mahsulotlar hamda brendlarni aniqlash imkonini beradi.",
+        stats: [
+          "• 1. Развивашки (Лорд Издат): Narx: 227.00 | Reyting: 5.00 | Sharhlar: 1,861",
+          "• 2. Вещие сны кота Сократа (АСТ): Narx: 430.00 | Reyting: 5.00 | Sharhlar: 1,702",
+          "• 3-10. Футболкалар (UZcotton): Narx: 442.00 - 461.00 | Reyting: 4.90 | Sharhlar: 268,869 ta",
+          "• Xulosa: UZcotton brendi 268,869 tadan ortiq sharh bilan 4.90 reytingni barqaror ushlab turibdi"
+        ],
+        code: `SELECT
+    sku,
+    name AS tovar_nomi,
+    brand AS brend,
+    final_price AS narx,
+    rating AS reyting,
+    review_count AS sharhlar_soni
+FROM wildberries_products
+WHERE review_count >= 1000
+ORDER BY rating DESC, review_count DESC
+LIMIT 10;`,
+        file: "sql_6_top_rated_products.png"
       }
     };
 
