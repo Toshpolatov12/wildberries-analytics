@@ -116,7 +116,7 @@
             </span>
           </div>
           <p class="text-xs text-slate-400 truncate flex items-center gap-2">
-            <span>Power BI</span> • <span>Excel Tahlili</span> • <span>PostgreSQL</span> • <span>Wildberries Analytics</span>
+            <span>Power BI</span> • <span>Python (EDA)</span> • <span>Excel Tahlili</span> • <span>PostgreSQL</span> • <span>Wildberries Analytics</span>
           </p>
         </div>
       </div>
@@ -233,24 +233,31 @@
           <span class="px-1.5 py-0.2 text-[10px] rounded bg-amber-500/20 text-amber-300 font-mono">2 ta Dashboard</span>
         </button>
 
-        <!-- Tab 2: Excel Tahlili & Diagrammalar -->
+        <!-- Tab 2: Python & EDA Tahlili -->
+        <button id="tab-btn-py" onclick="switchTab('py')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
+          <i data-lucide="binary" class="w-4 h-4"></i>
+          <span>2. Python &amp; EDA Tahlili</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded bg-indigo-500/20 text-indigo-300 font-mono">5 ta Tahlil</span>
+        </button>
+
+        <!-- Tab 3: Excel Tahlili & Diagrammalar -->
         <button id="tab-btn-excel" onclick="switchTab('excel')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
-          <span>2. Excel Tahlili &amp; Diagrammalar</span>
+          <span>3. Excel Tahlili &amp; Diagrammalar</span>
           <span class="px-1.5 py-0.2 text-[10px] rounded bg-emerald-500/20 text-emerald-300 font-mono">3 ta Tahlil</span>
         </button>
 
-        <!-- Tab 3: PostgreSQL Relyatsion Baza & SQL So'rovlari -->
+        <!-- Tab 4: PostgreSQL Relyatsion Baza & SQL So'rovlari -->
         <button id="tab-btn-sql" onclick="switchTab('sql')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="database" class="w-4 h-4"></i>
-          <span>3. PostgreSQL Baza &amp; SQL Tahlili</span>
+          <span>4. PostgreSQL Baza &amp; SQL Tahlili</span>
           <span class="px-1.5 py-0.2 text-[10px] rounded bg-sky-500/20 text-sky-300 font-mono">6 ta Bosqich</span>
         </button>
 
-        <!-- Tab 4: Boshlang'ich Ma'lumotlar & Loyiha Xulosasi -->
+        <!-- Tab 5: Boshlang'ich Ma'lumotlar & Loyiha Xulosasi -->
         <button id="tab-btn-data" onclick="switchTab('data')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="git-branch" class="w-4 h-4"></i>
-          <span>4. Ma'lumotlar Oqimi &amp; Xulosa</span>
+          <span>5. Ma'lumotlar Oqimi &amp; Xulosa</span>
         </button>
 
       </nav>
@@ -418,7 +425,151 @@
 
 
     <!-- ======================================================================= -->
-    <!-- TAB 2: EXCEL TAHLILI & DIAGRAMMALAR (PIVOT, RADAR, TREEMAP, PVZ)        -->
+    <!-- TAB 2: PYTHON & EDA TAHLILI (PANDAS, SEABORN, HISTOGRAM, BOXPLOT)       -->
+    <!-- ======================================================================= -->
+    <div id="tab-panel-py" class="tab-panel hidden space-y-6">
+      
+      <!-- Python Banner -->
+      <div class="bg-gradient-to-r from-indigo-950/40 via-slate-900 to-slate-900 border border-indigo-500/30 rounded-2xl p-5 sm:p-6 shadow-xl">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2 text-indigo-400 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="binary" class="w-4 h-4"></i>
+            Python &bull; Pandas, NumPy, Matplotlib &amp; Seaborn Eksplorativ Tahlili (EDA)
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">
+            Ma'lumotlar To'plami Statistikasi, Narx va Chegirma Taqsimoti Hamda Outliers Tahlili
+          </h2>
+          <p class="text-sm text-slate-300 max-w-3xl leading-relaxed">
+            Google Colab / Jupyter Notebook muhitida 967 ta mahsulot parametrlarini yuklash, tavsifiy statistika (<code class="text-indigo-300">describe()</code>), narxlar va chegirmalarning zichlik taqsimoti (Histogram &amp; KDE) hamda narxlardagi keskin anomaliyalarni (outliers) aniqlash.
+          </p>
+        </div>
+      </div>
+
+      <!-- Python Kartalari Gridi (5 ta asl rasm) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <!-- Python 1: df.head() -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('py_1')">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="table" class="w-4 h-4 text-indigo-400"></i>
+                1. Dastlabki Ma'lumotlar (head)
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Pandas df.head()</span>
+            </div>
+            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3 flex items-center justify-center">
+              <img src="assets/images/python_1_df_head.png" alt="Python df.head()" class="w-full h-44 object-contain">
+            </div>
+            <p class="text-xs text-slate-300 italic border-l-2 border-indigo-500/60 pl-2.5 line-clamp-3">
+              "Pandas, NumPy, Matplotlib va Seaborn kutubxonalari orqali ma'lumotlar to'plamini yuklash va dastlabki 5 ta qator atributlari (sku, narx, chegirma, reyting, sharhlar) strukturasi tekshirildi."
+            </p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-indigo-400 flex items-center justify-between">
+            <span>df.head() &bull; 11 ta ustun</span>
+            <span class="flex items-center gap-1 font-semibold">Ko'rish &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Python 2: df.describe() -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('py_2')">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="calculator" class="w-4 h-4 text-indigo-400"></i>
+                2. Tavsifiy Statistika
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">df.describe()</span>
+            </div>
+            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3 flex items-center justify-center">
+              <img src="assets/images/python_2_describe.png" alt="Python df.describe()" class="w-full h-44 object-contain">
+            </div>
+            <p class="text-xs text-slate-300 italic border-l-2 border-indigo-500/60 pl-2.5 line-clamp-3">
+              "Asosiy raqamli ko'rsatkichlarning tavsifiy statistikasi (df.describe() natijasi)."
+            </p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-indigo-400 flex items-center justify-between">
+            <span>O'rtacha narx: 2,882 RUB &bull; Reyting: 4.70</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Python 3: Yakuniy narxlar taqsimoti (Histogram & KDE) -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('py_3')">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="bar-chart-2" class="w-4 h-4 text-sky-400"></i>
+                3. Narxlar Taqsimoti (KDE)
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">Histogram &amp; KDE</span>
+            </div>
+            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3 flex items-center justify-center">
+              <img src="assets/images/python_3_price_distribution_kde.png" alt="Narxlar taqsimoti" class="w-full h-44 object-contain">
+            </div>
+            <p class="text-xs text-slate-300 italic border-l-2 border-sky-500/60 pl-2.5 line-clamp-3">
+              "Yakuniy narxlar taqsimoti (Histogram &amp; KDE)"
+            </p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-sky-400 flex items-center justify-between">
+            <span>O'ng assimetriya &bull; 0 - 60,000 RUB</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Python 4: Chegirma foizlari taqsimoti (Histogram & KDE) -->
+        <div class="visual-card p-5 flex flex-col justify-between" onclick="openModalById('py_4')">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="percent" class="w-4 h-4 text-amber-400"></i>
+                4. Chegirma Foizlari (KDE)
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Chegirma Taqsimoti</span>
+            </div>
+            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3 flex items-center justify-center">
+              <img src="assets/images/python_4_discount_distribution_kde.png" alt="Chegirma foizlari taqsimoti" class="w-full h-44 object-contain">
+            </div>
+            <p class="text-xs text-slate-300 italic border-l-2 border-amber-500/60 pl-2.5 line-clamp-3">
+              "Chegirma foizlari taqsimoti (Histogram &amp; KDE)."
+            </p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-amber-400 flex items-center justify-between">
+            <span>Median: 59.75% &bull; Cho'qqi: ~60%</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Python 5: Boxplot Outliers -->
+        <div class="visual-card p-5 flex flex-col justify-between col-span-1 md:col-span-2 lg:col-span-2" onclick="openModalById('py_5')">
+          <div>
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+              <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                <i data-lucide="box" class="w-4 h-4 text-rose-400"></i>
+                5. Narxlar va Chegirmalar Boxploti (Outliers Tahlili)
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">Boxplot &amp; Anomaliyalar</span>
+            </div>
+            <div class="img-container bg-slate-950 p-2 rounded-lg border border-slate-800 mb-3 flex items-center justify-center">
+              <img src="assets/images/python_5_boxplots_outliers.png" alt="Narxlar va Chegirmalar Boxploti" class="w-full h-52 object-contain">
+            </div>
+            <p class="text-xs text-slate-300 italic border-l-2 border-rose-500/60 pl-2.5">
+              "Boxplot (qutichali diagramma) orqali narxlarda 10 000 rubldan yuqori keskin anomaliyalar (outliers) mavjudligi, chegirmalarda esa anomaliyalarsiz ko'rsatkichlar 43–74% oralig'ida barqaror taqsimlangani aniqlandi."
+            </p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-slate-800 text-[11px] text-rose-400 flex items-center justify-between">
+            <span>Narx outliers: >10,000 RUB &bull; Chegirma IQR: 43–74%</span>
+            <span class="flex items-center gap-1 font-semibold">Tahlil &rarr;</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ======================================================================= -->
+    <!-- TAB 3: EXCEL TAHLILI & DIAGRAMMALAR (PIVOT, RADAR, TREEMAP, PVZ)        -->
     <!-- ======================================================================= -->
     <div id="tab-panel-excel" class="tab-panel hidden space-y-6">
       
@@ -682,7 +833,7 @@
 
 
     <!-- ======================================================================= -->
-    <!-- TAB 4: MA'LUMOTLAR OQIMI & LOYIHA XULOSASI                              -->
+    <!-- TAB 5: MA'LUMOTLAR OQIMI & LOYIHA XULOSASI                              -->
     <!-- ======================================================================= -->
     <div id="tab-panel-data" class="tab-panel hidden space-y-6">
       
@@ -694,11 +845,11 @@
             Wildberries Ma'lumotlar Tahlili Quvuri (Pipeline)
           </h3>
           <p class="text-xs sm:text-sm text-slate-300">
-            Loyiha xom CSV ma'lumotlaridan boshlab, PostgreSQL relyatsion bazasida saqlash, SQL so'rovlari orqali agregatsiyalash, Excel orqali chuqur eksplorativ tahlil hamda Power BI orqali interaktiv vizuallashtirishgacha bo'lgan to'liq tsiklni qamrab oladi.
+            Loyiha xom CSV ma'lumotlaridan boshlab, PostgreSQL relyatsion bazasida saqlash, SQL so'rovlari orqali agregatsiyalash, Python (EDA) va Excel orqali chuqur statistik tahlil hamda Power BI orqali interaktiv vizuallashtirishgacha bo'lgan to'liq tsiklni qamrab oladi.
           </p>
         </div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
           
           <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
             <div class="flex items-center gap-2 font-bold text-sky-400">
@@ -721,8 +872,18 @@
           </div>
 
           <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-indigo-400">
+              <span class="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center text-xs">3</span>
+              Python &amp; EDA Tahlili
+            </div>
+            <p class="text-slate-300">
+              Pandas va Seaborn orqali tavsifiy statistika (describe), narx va chegirma taqsimotlari (KDE) hamda 10 000+ RUB outliers Boxplot orqali aniqlandi.
+            </p>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
             <div class="flex items-center gap-2 font-bold text-emerald-400">
-              <span class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs">3</span>
+              <span class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs">4</span>
               Excel Eksplorativ Tahlili
             </div>
             <p class="text-slate-300">
@@ -732,7 +893,7 @@
 
           <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
             <div class="flex items-center gap-2 font-bold text-purple-400">
-              <span class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-xs">4</span>
+              <span class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-xs">5</span>
               Power BI Dashboardlari
             </div>
             <p class="text-slate-300">
@@ -883,7 +1044,7 @@
     function switchTab(tabId) {
       document.querySelectorAll('.tab-panel').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('border-amber-500', 'text-amber-400', 'border-emerald-500', 'text-emerald-400', 'border-sky-500', 'text-sky-400', 'border-purple-500', 'text-purple-400', 'font-bold');
+        btn.classList.remove('border-amber-500', 'text-amber-400', 'border-indigo-500', 'text-indigo-400', 'border-emerald-500', 'text-emerald-400', 'border-sky-500', 'text-sky-400', 'border-purple-500', 'text-purple-400', 'font-bold');
         btn.classList.add('border-transparent', 'text-slate-400', 'font-medium');
       });
 
@@ -895,6 +1056,7 @@
         activeBtn.classList.remove('border-transparent', 'text-slate-400', 'font-medium');
         activeBtn.classList.add('font-bold');
         if (tabId === 'pbi') activeBtn.classList.add('border-amber-500', 'text-amber-400');
+        else if (tabId === 'py') activeBtn.classList.add('border-indigo-500', 'text-indigo-400');
         else if (tabId === 'excel') activeBtn.classList.add('border-emerald-500', 'text-emerald-400');
         else if (tabId === 'sql') activeBtn.classList.add('border-sky-500', 'text-sky-400');
         else activeBtn.classList.add('border-purple-500', 'text-purple-400');
@@ -953,6 +1115,120 @@ Price_Category = SWITCH(
     "Luks (> 15000)"
 )`,
         file: "powerbi_pricing_funnel_dashboard.png"
+      },
+      'py_1': {
+        title: "Python / Pandas: Dastlabki Ma'lumotlarni Yuklash va Tekshirish (df.head())",
+        badge: "Pandas df.head()",
+        badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+        img: "assets/images/python_1_df_head.png",
+        desc: "Pandas, NumPy, Matplotlib va Seaborn kutubxonalari orqali ma'lumotlar to'plamini yuklash va dastlabki 5 ta qator atributlari (sku, narx, chegirma, reyting, sharhlar) strukturasi tekshirildi.",
+        stats: [
+          "• Yuklangan fayl: wildberries_full_analytics_original.xlsx",
+          "• Kutubxonalar: pandas (pd), numpy (np), matplotlib.pyplot (plt), seaborn (sns)",
+          "• Dastlabki 5 qator: ANAM brendi (Шапка бини с отворотом), narxi: 395 rubl (80.25% chegirma), 4.9 reyting, 305 ta sharh",
+          "• Ustunlar soni: 11 ta maydon (sku, name, brand, main_category, initial_price, final_price, discount_amount, discount_percent, price_segment, rating, review_count)"
+        ],
+        code: `import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Fayl formatiga qarab bittasini tanlang:
+# Agar fayl oxiri .xlsx bo'lsa:
+df = pd.read_excel('/content/wildberries_full_analytics_original.xlsx')
+
+# Dastlabki 5 qatorni ko'rish
+df.head()`,
+        file: "python_1_df_head.png"
+      },
+      'py_2': {
+        title: "Python / Pandas: Asosiy Raqamli Ko'rsatkichlarning Tavsifiy Statistikasi",
+        badge: "df.describe()",
+        badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+        img: "assets/images/python_2_describe.png",
+        desc: "Asosiy raqamli ko'rsatkichlarning tavsifiy statistikasi (df.describe() natijasi).",
+        stats: [
+          "• Qatorlar soni (count): 967 ta SKU (rating ustunida 787 ta to'ldirilgan qiymat)",
+          "• Dastlabki narx (initial_price): Mean: 6,930.19 RUB | Max: 117,298 RUB | Std: 18,127.12",
+          "• Yakuniy narx (final_price): Mean: 2,882.53 RUB | Median (50%): 635.00 RUB | Max: 61,933 RUB",
+          "• Chegirma foizi (discount_percent): Mean: 57.04% | Median: 59.75% | Max: 100%",
+          "• Reyting (rating): Mean: 4.701 / 5.00 | Median: 4.80 | Min: 1.00",
+          "• Sharhlar soni (review_count): Mean: 6,734.27 ta | Median: 33 ta | Max: 268,869 ta"
+        ],
+        code: `df[['initial_price', 'final_price', 'discount_percent', 'rating', 'review_count']].describe()
+
+# Xulosa:
+# final_price medianasi (635 RUB) o'rtacha qiymatidan (2882 RUB) sezilarli darajada kichik.
+# Bu tovarlar katalogida kam sonli qimmatbaho mahsulotlar (outliers) borligini ko'rsatadi.`,
+        file: "python_2_describe.png"
+      },
+      'py_3': {
+        title: "Python / Seaborn: Yakuniy Narxlar Taqsimoti (Histogram & KDE)",
+        badge: "Histogram & KDE (Narx)",
+        badgeColor: "bg-sky-500/20 text-sky-300 border-sky-500/30",
+        img: "assets/images/python_3_price_distribution_kde.png",
+        desc: "Yakuniy narxlar taqsimoti (Histogram & KDE)",
+        stats: [
+          "• Taqsimot shakli: O'ng tomonga cho'zilgan kuchli assimetriya (Right-skewed distribution)",
+          "• Zichlik konsentratsiyasi: Tovarlarning 80% dan ortig'i (780+ SKU) 0 dan 3,000 rublgacha bo'lgan oraliqda joylashgan",
+          "• KDE (Kernel Density Estimation): Eng yuqori zichlik cho'qqisi 500–1,000 rubl oralig'ida",
+          "• Qimmat segment (Dumi): 10,000 rubldan 60,000 rublgacha cho'zilgan uzun dum mavjud"
+        ],
+        code: `plt.figure(figsize=(10, 6))
+sns.histplot(df['final_price'], kde=True, color='#60a5fa', bins=30)
+plt.title('Yakuniy narxlar taqsimoti (Histogram & KDE)')
+plt.xlabel('Narx (rubl)')
+plt.ylabel('Soni')
+plt.show()`,
+        file: "python_3_price_distribution_kde.png"
+      },
+      'py_4': {
+        title: "Python / Seaborn: Chegirma Foizlari Taqsimoti (Histogram & KDE)",
+        badge: "Histogram & KDE (Chegirma)",
+        badgeColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+        img: "assets/images/python_4_discount_distribution_kde.png",
+        desc: "Chegirma foizlari taqsimoti (Histogram & KDE).",
+        stats: [
+          "• Taqsimot shakli: Qo'ng'iroqsimon (Normalga yaqin) barqaror taqsimot",
+          "• Asosiy cho'qqi (Mode): 60% – 65% chegirma oralig'ida (105 tadan ortiq tovar)",
+          "• Kvartillararo oraliq: Tovarlarning 50% qismi 43% (Q1) dan 74% (Q3) gacha bo'lgan chegirmaga ega",
+          "• Lokal to'planishlar: 20% va 50% psixologik chegirma darajalarida ham kichik cho'qqilar mavjud"
+        ],
+        code: `plt.figure(figsize=(10, 6))
+sns.histplot(df['discount_percent'], kde=True, color='#f59e0b', bins=20)
+plt.title('Chegirma foizlari taqsimoti (Histogram & KDE)')
+plt.xlabel('Chegirma (%)')
+plt.ylabel('Soni')
+plt.show()`,
+        file: "python_4_discount_distribution_kde.png"
+      },
+      'py_5': {
+        title: "Python / Seaborn: Narxlar va Chegirmalar Boyicha Boxplot (Outliers Tahlili)",
+        badge: "Boxplot (Outliers)",
+        badgeColor: "bg-rose-500/20 text-rose-300 border-rose-500/30",
+        img: "assets/images/python_5_boxplots_outliers.png",
+        desc: "Boxplot (qutichali diagramma) orqali narxlarda 10 000 rubldan yuqori keskin anomaliyalar (outliers) mavjudligi, chegirmalarda esa anomaliyalarsiz ko'rsatkichlar 43–74% oralig'ida barqaror taqsimlangani aniqlandi.",
+        stats: [
+          "• Chap Boxplot (Narxlar): Quticha 385–1,620 RUB oralig'ida siqilgan, 10,000 rubldan yuqori juda ko'p nuqtalar (outliers) 60,000+ rublgacha ko'tarilgan",
+          "• O'ng Boxplot (Chegirmalar): Quticha 43% dan 74% gacha keng ochilgan, medianasi 59.75%",
+          "• Anomaliyalar yo'qligi: Chegirmalar qatorida tashqi nuqtalar mavjud emas, ya'ni chegirmalar tizimli va me'yorda berilgan",
+          "• Xulosa: Narxlardagi anomaliyalar asosan «Мебель» va qimmatbaho texnika toifalariga to'g'ri keladi"
+        ],
+        code: `fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+# 1. Yakuniy narxlar bo'yicha Boxplot (Outliers)
+sns.boxplot(y=df['final_price'], ax=axes[0], color='#f87171')
+axes[0].set_title('Yakuniy narxlar boyicha Boxplot (Outliers)')
+axes[0].set_ylabel('Narx (rubl)')
+
+# 2. Chegirma foizlari bo'yicha Boxplot
+sns.boxplot(y=df['discount_percent'], ax=axes[1], color='#86efac')
+axes[1].set_title('Chegirma foizlari boyicha Boxplot')
+axes[1].set_ylabel('Chegirma (%)')
+
+plt.tight_layout()
+plt.show()`,
+        file: "python_5_boxplots_outliers.png"
       },
       'excel_1': {
         title: "Excel: Pivot Table va Radar Diagrammasi",
