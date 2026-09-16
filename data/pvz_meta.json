@@ -1,0 +1,37 @@
+{
+  "Rossiya": {
+    "key": "rossiya",
+    "count": 26569,
+    "file_size_kb": 4597.2
+  },
+  "Belarus": {
+    "key": "belarus",
+    "count": 902,
+    "file_size_kb": 152.9
+  },
+  "Qozog'iston": {
+    "key": "qozogiston",
+    "count": 445,
+    "file_size_kb": 93.0
+  },
+  "Armaniston": {
+    "key": "armaniston",
+    "count": 289,
+    "file_size_kb": 48.7
+  },
+  "O'zbekiston": {
+    "key": "ozbekiston",
+    "count": 77,
+    "file_size_kb": 12.6
+  },
+  "Qirg'iziston": {
+    "key": "qirgiziston",
+    "count": 30,
+    "file_size_kb": 6.5
+  },
+  "All": {
+    "key": "all",
+    "count": 28312,
+    "file_size_kb": 548.2
+  }
+}
