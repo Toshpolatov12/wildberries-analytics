@@ -41,11 +41,48 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- Leaflet Map CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
   <style>
     body {
       background-color: #080c14;
       color: #f1f5f9;
       font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+
+    /* Leaflet Dark Matter Customization */
+    .leaflet-popup-content-wrapper {
+      background: #0f172a !important;
+      color: #f1f5f9 !important;
+      border: 1px solid #38bdf8 !important;
+      border-radius: 12px !important;
+      box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.3) !important;
+    }
+    .leaflet-popup-tip {
+      background: #0f172a !important;
+      border: 1px solid #38bdf8 !important;
+    }
+    .leaflet-popup-close-button {
+      color: #94a3b8 !important;
+    }
+    .leaflet-control-zoom a {
+      background-color: #0f172a !important;
+      color: #38bdf8 !important;
+      border-color: #1e293b !important;
+    }
+    .leaflet-control-zoom a:hover {
+      background-color: #1e293b !important;
+      color: #ffffff !important;
+    }
+    .leaflet-control-attribution {
+      background: rgba(8, 12, 20, 0.8) !important;
+      color: #64748b !important;
+      font-size: 10px !important;
+    }
+    .leaflet-control-attribution a {
+      color: #38bdf8 !important;
     }
     .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
     .custom-scrollbar::-webkit-scrollbar-track { background: #080c14; }
@@ -161,36 +198,36 @@
   </header>
 
   <!-- ========================================================================= -->
-  <!-- 2. ANIQ KPI KO'RSATKICHLARI (HAQIQIY WILDBERRIES LOYIHASI METRIKALARI)     -->
+  <!-- 2. ANIQ KPI KO'RSATKICHLARI                                              -->
   <!-- ========================================================================= -->
   <section class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
       
-      <!-- KPI 1: Tahlil qilingan sharhlar -->
+      <!-- KPI 1 -->
       <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 flex flex-col justify-between hover:border-sky-500/40 transition">
         <div class="flex items-center justify-between text-slate-400 text-xs font-semibold uppercase tracking-wider">
-          <span>Jami Sharhlar (Reviews)</span>
+          <span>Jami Sharhlar</span>
           <i data-lucide="message-square" class="w-4 h-4 text-sky-400"></i>
         </div>
         <div class="mt-2">
           <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">6,512,036</div>
-          <div class="text-[11px] text-sky-400 mt-1">Decomposition Tree tahlilida o'rganilgan</div>
+          <div class="text-xs text-sky-400 mt-0.5">Mijozlar tahlili</div>
         </div>
       </div>
 
-      <!-- KPI 2: Tovar namunalari (SKU) va Voronka -->
+      <!-- KPI 2 -->
       <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/40 transition">
         <div class="flex items-center justify-between text-slate-400 text-xs font-semibold uppercase tracking-wider">
-          <span>Katalog Tovar (SKU)</span>
+          <span>Katalog Tovarlari</span>
           <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i>
         </div>
         <div class="mt-2">
           <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">967 <span class="text-xs font-normal text-amber-400">SKU</span></div>
-          <div class="text-[11px] text-slate-400 mt-1">PostgreSQL &bull; COUNT(*) bilan to'liq tekshirilgan</div>
+          <div class="text-xs text-slate-400 mt-0.5">32 ta kategoriya</div>
         </div>
       </div>
 
-      <!-- KPI 3: O'rtacha Reyting -->
+      <!-- KPI 3 -->
       <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 flex flex-col justify-between hover:border-emerald-500/40 transition">
         <div class="flex items-center justify-between text-slate-400 text-xs font-semibold uppercase tracking-wider">
           <span>O'rtacha Reyting</span>
@@ -198,19 +235,19 @@
         </div>
         <div class="mt-2">
           <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">4.70 <span class="text-xs font-normal text-emerald-400">/ 5.00</span></div>
-          <div class="text-[11px] text-emerald-400 mt-1">Power BI Gauge ko'rsatkichi (Mijozlar ishonchi)</div>
+          <div class="text-xs text-emerald-400 mt-0.5">Yuqori sifat ko'rsatkichi</div>
         </div>
       </div>
 
-      <!-- KPI 4: Yetakchi Kategoriya & Brend -->
+      <!-- KPI 4 -->
       <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 flex flex-col justify-between hover:border-purple-500/40 transition">
         <div class="flex items-center justify-between text-slate-400 text-xs font-semibold uppercase tracking-wider">
-          <span>Top Brend &amp; Kategoriya</span>
+          <span>Yetakchi Brend</span>
           <i data-lucide="award" class="w-4 h-4 text-purple-400"></i>
         </div>
         <div class="mt-2">
-          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">4.8 <span class="text-xs font-normal text-purple-400">Mln</span></div>
-          <div class="text-[11px] text-purple-400 mt-1">UZcotton &bull; Футболки (Eng ko'p xarid)</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">UZcotton</div>
+          <div class="text-xs text-purple-400 mt-0.5">4.8 mln sharh &bull; 4.90 reyting</div>
         </div>
       </div>
 
@@ -220,52 +257,38 @@
   <!-- ========================================================================= -->
   <!-- 3. ASOSIY BO'LIMLAR / TABLAR                                             -->
   <!-- ========================================================================= -->
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
     
-    <!-- Tab Navigatsiyasi -->
+    <!-- Tab Navigatsiyasi (Minimalist) -->
     <div class="flex items-center justify-between border-b border-slate-800 pb-2 overflow-x-auto">
       <nav class="flex items-center gap-2" role="tablist">
         
-        <!-- Tab 1: Haqiqiy Power BI Dashboardlari -->
         <button id="tab-btn-pbi" onclick="switchTab('pbi')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-bold border-b-2 border-amber-500 text-amber-400 flex items-center gap-2 transition">
           <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
-          <span>1. Power BI Dashboardlari</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded bg-amber-500/20 text-amber-300 font-mono">2 ta Dashboard</span>
+          <span>1. Power BI</span>
         </button>
 
-        <!-- Tab 2: Python & EDA Tahlili -->
         <button id="tab-btn-py" onclick="switchTab('py')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="binary" class="w-4 h-4"></i>
-          <span>2. Python &amp; EDA Tahlili</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded bg-indigo-500/20 text-indigo-300 font-mono">5 ta Tahlil</span>
+          <span>2. Python (EDA)</span>
         </button>
 
-        <!-- Tab 3: Excel Tahlili & Diagrammalar -->
         <button id="tab-btn-excel" onclick="switchTab('excel')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
-          <span>3. Excel Tahlili &amp; Diagrammalar</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded bg-emerald-500/20 text-emerald-300 font-mono">3 ta Tahlil</span>
+          <span>3. Excel Tahlili</span>
         </button>
 
-        <!-- Tab 4: PostgreSQL Relyatsion Baza & SQL So'rovlari -->
         <button id="tab-btn-sql" onclick="switchTab('sql')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="database" class="w-4 h-4"></i>
-          <span>4. PostgreSQL Baza &amp; SQL Tahlili</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded bg-sky-500/20 text-sky-300 font-mono">6 ta Bosqich</span>
+          <span>4. PostgreSQL</span>
         </button>
 
-        <!-- Tab 5: Boshlang'ich Ma'lumotlar & Loyiha Xulosasi -->
         <button id="tab-btn-data" onclick="switchTab('data')" class="tab-btn px-4 py-2 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
           <i data-lucide="git-branch" class="w-4 h-4"></i>
-          <span>5. Ma'lumotlar Oqimi &amp; Xulosa</span>
+          <span>5. Pipeline &amp; Xulosa</span>
         </button>
 
       </nav>
-
-      <span class="hidden xl:inline-flex text-xs text-slate-500 font-mono items-center gap-1">
-        <i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5 text-sky-400"></i>
-        Har bir rasmni bosib ichiga kiring
-      </span>
     </div>
 
 
@@ -926,6 +949,102 @@
 
     </div>
 
+    <!-- ======================================================================= -->
+    <!-- GEOGRAFIK LOGISTIKA XARITASI (PASTGA SCROLL QILGANDA AVTOMATIK KO'RINADI) -->
+    <!-- ======================================================================= -->
+    <section id="map-section" class="mt-14 space-y-4">
+      
+      <!-- Xarita Sarlavhasi va Filtr Boshqaruvi -->
+      <div class="bg-gradient-to-r from-sky-950/50 via-slate-900 to-slate-900 border border-sky-500/30 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2 text-sky-400 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            Geografik Logistika &bull; Wildberries PVZ Tarqatish Tarmog'i
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">
+            Wildberries Logistika Punktlarining Xaritasi (Interaktiv GPS Xarita)
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+            Quyidagi menyudan kerakli mamlakatni tanlang va xaritada punktlar joylashuvini ko'k belgilar bilan o'rganing. Xaritani yaqinlashtirganingizda (zoom) ko'k nuqtalar punktlarning aniq ko'chalari va manzillarini ko'rsatadi.
+          </p>
+        </div>
+
+        <!-- Mamlakatni Tanlash Filtr Boshqaruvi -->
+        <div class="flex flex-wrap items-center gap-3 bg-slate-950/90 p-3 rounded-xl border border-slate-800 shrink-0">
+          <div class="text-xs text-slate-400 font-semibold flex items-center gap-1.5">
+            <i data-lucide="globe" class="w-4 h-4 text-sky-400"></i>
+            <span>Mamlakatni tanlang:</span>
+          </div>
+          <select id="country-select" onchange="onCountryChange(this.value)" class="bg-slate-900 border border-sky-500/40 text-white font-medium text-xs sm:text-sm rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-500 focus:outline-none transition cursor-pointer">
+            <option value="all">🌍 Barcha Mamlakatlar</option>
+            <option value="ru" selected>🇷🇺 Rossiya (Moskva, SPb, Krasnodar...)</option>
+            <option value="uz">🇺🇿 O'zbekiston (Toshkent, Samarqand, Farg'ona...)</option>
+            <option value="kz">🇰🇿 Qozog'iston (Olmaota, Ostona, Chimkent...)</option>
+            <option value="by">🇧🇾 Belarus (Minsk, Gomel, Brest...)</option>
+            <option value="kg">🇰🇬 Qirg'iziston (Bishkek, O'sh...)</option>
+            <option value="am">🇦🇲 Armaniston (Yerevan, Gyumri...)</option>
+          </select>
+          <div class="px-2.5 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-mono font-bold" id="pvz-counter">
+            2,023+ PVZ
+          </div>
+        </div>
+      </div>
+
+      <!-- Xarita Konteyneri (Katta, Immersiv) -->
+      <div class="relative bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
+        <div id="pvz-map" style="height: 560px; width: 100%; z-index: 10;" class="outline-none"></div>
+
+        <!-- Tezkor Shaharlar Menyusi (Xarita ustida suzuvchi) -->
+        <div class="absolute top-3 right-3 z-20 hidden sm:flex flex-wrap gap-1.5 max-w-md bg-slate-900/90 backdrop-blur-md p-2 rounded-xl border border-slate-800 shadow-xl">
+          <button onclick="flyToCity('moscow')" class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-sky-500/10 hover:bg-sky-500/30 text-sky-300 border border-sky-500/20 transition">
+            Moskva
+          </button>
+          <button onclick="flyToCity('spb')" class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
+            Sankt-Peterburg
+          </button>
+          <button onclick="flyToCity('krasnodar')" class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
+            Krasnodar
+          </button>
+          <button onclick="flyToCity('tashkent')" class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
+            Toshkent
+          </button>
+          <button onclick="flyToCity('almaty')" class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
+            Olmaota
+          </button>
+          <button onclick="flyToCity('minsk')" class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
+            Minsk
+          </button>
+        </div>
+
+        <!-- Xarita tagidagi tezkor izoh -->
+        <div class="absolute bottom-3 left-3 z-20 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-800 text-[11px] text-slate-300 flex items-center gap-2 shadow-lg">
+          <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping"></span>
+          <span>Ko'k nuqtalarni bosib aniq PVZ manzilini ko'rishingiz va kattalashtirishingiz mumkin</span>
+        </div>
+      </div>
+
+      <!-- Xarita Ostidagi Statistik Kartalar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs pt-1">
+        <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+          <div class="text-slate-400 font-medium">Rossiya Markazi</div>
+          <div class="text-white font-mono font-bold text-sm mt-0.5">Moskva: 2,023 PVZ &bull; SPb: 508</div>
+        </div>
+        <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+          <div class="text-slate-400 font-medium">Janubiy Xab</div>
+          <div class="text-sky-400 font-mono font-bold text-sm mt-0.5">Krasnodar &amp; Rostov: 546 PVZ</div>
+        </div>
+        <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+          <div class="text-slate-400 font-medium">Markaziy Osiyo</div>
+          <div class="text-emerald-400 font-mono font-bold text-sm mt-0.5">Toshkent, Olmaota, Bishkek</div>
+        </div>
+        <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+          <div class="text-slate-400 font-medium">Xarita Turi</div>
+          <div class="text-amber-400 font-mono font-bold text-sm mt-0.5">Dark Matter &bull; GPS Nuqtalar</div>
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
   <!-- ========================================================================= -->
@@ -1507,9 +1626,243 @@ LIMIT 10;`,
       }
     });
 
-    // Lucide ikonkalarni yuklash
+    // =========================================================================
+    // 7. WILDBERRIES LOGISTIKA PVZ XARITASI (LEAFLET.JS DARK MATTER)
+    // =========================================================================
+    let pvzMap = null;
+    let markersLayer = null;
+
+    // Wildberries PVZ tarqatish punktlari ma'lumotlar to'plami (GPS Koordinatalar)
+    const pvzDatabase = [
+      // ROSSIYA - MOSKVA
+      { name: "Wildberries PVZ #1042", city: "Moskva", country: "ru", lat: 55.7522, lng: 37.6156, address: "Tverskaya ko'chasi, 12", orders: "2,400+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1058", city: "Moskva", country: "ru", lat: 55.7558, lng: 37.6173, address: "Okhotny Ryad, 2", orders: "3,100+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1104", city: "Moskva", country: "ru", lat: 55.7602, lng: 37.6254, address: "Kuznetsky Most, 7", orders: "2,800+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1182", city: "Moskva", country: "ru", lat: 55.7689, lng: 37.6032, address: "Malaya Bronnaya, 24", orders: "1,900+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1209", city: "Moskva", country: "ru", lat: 55.7412, lng: 37.5989, address: "Ostozhenka ko'chasi, 15", orders: "2,200+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1340", city: "Moskva", country: "ru", lat: 55.7924, lng: 37.5812, address: "Butyrskaya ko'chasi, 84", orders: "1,750+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1411", city: "Moskva", country: "ru", lat: 55.8123, lng: 37.5912, address: "Dmitrovskoye shosse, 29", orders: "2,100+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1522", city: "Moskva", country: "ru", lat: 55.8456, lng: 37.6321, address: "Yeniseyskaya ko'chasi, 19", orders: "1,850+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1630", city: "Moskva", country: "ru", lat: 55.7712, lng: 37.7123, address: "Semenovskaya maydoni, 1", orders: "2,600+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1715", city: "Moskva", country: "ru", lat: 55.7912, lng: 37.7812, address: "Pervomayskaya ko'chasi, 42", orders: "1,950+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1844", city: "Moskva", country: "ru", lat: 55.7012, lng: 37.6123, address: "Varshavskoye shosse, 36", orders: "2,500+ buyurtma/kun" },
+      { name: "Wildberries PVZ #1902", city: "Moskva", country: "ru", lat: 55.6712, lng: 37.6312, address: "Kolomenskaya ko'chasi, 12", orders: "2,150+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2018", city: "Moskva", country: "ru", lat: 55.6312, lng: 37.6112, address: "Chertanovskaya, 20/2", orders: "1,800+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2155", city: "Moskva", country: "ru", lat: 55.5912, lng: 37.5912, address: "Akademika Yangelya, 6", orders: "2,300+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2241", city: "Moskva", country: "ru", lat: 55.7412, lng: 37.5112, address: "Kutuzovskiy prospekt, 48", orders: "3,400+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2319", city: "Moskva", country: "ru", lat: 55.7312, lng: 37.4512, address: "Rublyovskoye shosse, 16", orders: "2,700+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2408", city: "Moskva", country: "ru", lat: 55.8212, lng: 37.4312, address: "Skhodnenskaya, 37", orders: "2,050+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2512", city: "Moskva viloyati", country: "ru", lat: 55.8941, lng: 37.4440, address: "Khimki, Mayakovskiy ko'chasi, 14", orders: "2,200+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2633", city: "Moskva viloyati", country: "ru", lat: 55.6789, lng: 37.2654, address: "Odintsovo, Mozhayskoye shosse, 71", orders: "1,900+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2740", city: "Moskva viloyati", country: "ru", lat: 55.8312, lng: 37.3212, address: "Krasnogorsk, Lenina ko'chasi, 26", orders: "2,100+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2815", city: "Moskva viloyati", country: "ru", lat: 55.4312, lng: 37.5512, address: "Podolsk, Kirova ko'chasi, 46", orders: "1,980+ buyurtma/kun" },
+      { name: "Wildberries PVZ #2904", city: "Moskva viloyati", country: "ru", lat: 55.9112, lng: 37.7312, address: "Mytishchi, Mira prospekti, 32", orders: "2,350+ buyurtma/kun" },
+
+      // ROSSIYA - SANKT-PETERBURG
+      { name: "Wildberries PVZ #3011", city: "Sankt-Peterburg", country: "ru", lat: 59.9343, lng: 30.3351, address: "Nevsky prospekt, 54", orders: "2,900+ buyurtma/kun" },
+      { name: "Wildberries PVZ #3045", city: "Sankt-Peterburg", country: "ru", lat: 59.9321, lng: 30.3341, address: "Gostiny Dvor, Sadovaya 17", orders: "3,200+ buyurtma/kun" },
+      { name: "Wildberries PVZ #3112", city: "Sankt-Peterburg", country: "ru", lat: 59.9612, lng: 30.3012, address: "Kamennoostrovsky prospekt, 28", orders: "2,400+ buyurtma/kun" },
+      { name: "Wildberries PVZ #3204", city: "Sankt-Peterburg", country: "ru", lat: 59.9412, lng: 30.2712, address: "7-ya liniya V.O., 34", orders: "2,100+ buyurtma/kun" },
+      { name: "Wildberries PVZ #3289", city: "Sankt-Peterburg", country: "ru", lat: 59.8812, lng: 30.3212, address: "Moskovsky prospekt, 172", orders: "2,750+ buyurtma/kun" },
+      { name: "Wildberries PVZ #3340", city: "Sankt-Peterburg", country: "ru", lat: 60.0012, lng: 30.2612, address: "Komendantskiy prospekt, 13", orders: "2,600+ buyurtma/kun" },
+      { name: "Wildberries PVZ #3412", city: "Sankt-Peterburg", country: "ru", lat: 59.8312, lng: 30.3812, address: "Kupchinskaya ko'chasi, 23", orders: "1,850+ buyurtma/kun" },
+      { name: "Wildberries PVZ #3490", city: "Sankt-Peterburg", country: "ru", lat: 60.0512, lng: 30.4512, address: "Murino, Aviatorov Baltiki, 9", orders: "3,150+ buyurtma/kun" },
+
+      // ROSSIYA - KRASNODAR & JANUB
+      { name: "Wildberries PVZ #4012", city: "Krasnodar", country: "ru", lat: 45.0355, lng: 38.9753, address: "Krasnaya ko'chasi, 154", orders: "2,300+ buyurtma/kun" },
+      { name: "Wildberries PVZ #4088", city: "Krasnodar", country: "ru", lat: 45.0451, lng: 38.9812, address: "Severnaya ko'chasi, 320", orders: "2,500+ buyurtma/kun" },
+      { name: "Wildberries PVZ #4150", city: "Krasnodar", country: "ru", lat: 45.0189, lng: 39.0112, address: "Stavropolskaya, 182", orders: "1,950+ buyurtma/kun" },
+      { name: "Wildberries PVZ #4220", city: "Sochi", country: "ru", lat: 43.5855, lng: 39.7231, address: "Kurortny prospekt, 50", orders: "2,700+ buyurtma/kun" },
+      { name: "Wildberries PVZ #4295", city: "Novorossiysk", country: "ru", lat: 44.7244, lng: 37.7678, address: "Sovetov ko'chasi, 42", orders: "1,800+ buyurtma/kun" },
+      { name: "Wildberries PVZ #4350", city: "Rostov-na-Donu", country: "ru", lat: 47.2225, lng: 39.7188, address: "Bolshaya Sadovaya, 65", orders: "2,450+ buyurtma/kun" },
+      { name: "Wildberries PVZ #4410", city: "Rostov-na-Donu", country: "ru", lat: 47.2812, lng: 39.7112, address: "Kosmonavtov prospekti, 15", orders: "2,100+ buyurtma/kun" },
+      { name: "Wildberries PVZ #4502", city: "Simferopol", country: "ru", lat: 44.9521, lng: 34.1024, address: "Kirova prospekti, 36", orders: "2,250+ buyurtma/kun" },
+      { name: "Wildberries PVZ #4580", city: "Sevastopol", country: "ru", lat: 44.6166, lng: 33.5254, address: "Nakhimova prospekti, 11", orders: "2,150+ buyurtma/kun" },
+
+      // O'ZBEKISTON - TOSHKENT VA VILOYATLAR
+      { name: "Wildberries PVZ #UZ-01", city: "Toshkent", country: "uz", lat: 41.2721, lng: 69.2045, address: "Chilonzor tumani, Muqimiy ko'chasi, 166", orders: "1,850+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-02", city: "Toshkent", country: "uz", lat: 41.3654, lng: 69.2845, address: "Yunusobod tumani, Amir Temur shoh, 114", orders: "2,300+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-03", city: "Toshkent", country: "uz", lat: 41.3254, lng: 69.3312, address: "Mirzo Ulug'bek tumani, Buyuk Ipak Yo'li, 45", orders: "2,100+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-04", city: "Toshkent", country: "uz", lat: 41.2212, lng: 69.2212, address: "Sergeli tumani, Yangi Sergeli ko'chasi, 28", orders: "1,650+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-05", city: "Toshkent", country: "uz", lat: 41.3189, lng: 69.2412, address: "Shayxontohur tumani, Navoiy shoh, 21", orders: "2,450+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-06", city: "Toshkent", country: "uz", lat: 41.2954, lng: 69.2712, address: "Mirobod tumani, Shahrisabz ko'chasi, 10", orders: "2,600+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-07", city: "Toshkent", country: "uz", lat: 41.2812, lng: 69.2512, address: "Yakkasaroy tumani, Shota Rustaveli, 53", orders: "1,950+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-08", city: "Samarqand", country: "uz", lat: 39.6542, lng: 66.9758, address: "Registon ko'chasi, 82", orders: "1,750+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-09", city: "Samarqand", country: "uz", lat: 39.6612, lng: 66.9312, address: "Gagarin ko'chasi, 34", orders: "1,400+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-10", city: "Buxoro", country: "uz", lat: 39.7747, lng: 64.4286, address: "Bahouddin Naqshbandiy ko'chasi, 14", orders: "1,350+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-11", city: "Farg'ona", country: "uz", lat: 40.3842, lng: 71.7843, address: "Al-Farg'oniy ko'chasi, 47", orders: "1,600+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-12", city: "Andijon", country: "uz", lat: 40.7821, lng: 72.3442, address: "Bobur shoh ko'chasi, 65", orders: "1,550+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-13", city: "Namangan", country: "uz", lat: 40.9983, lng: 71.6726, address: "Navoiy ko'chasi, 88", orders: "1,480+ buyurtma/kun" },
+      { name: "Wildberries PVZ #UZ-14", city: "Qarshi", country: "uz", lat: 38.8612, lng: 65.7912, address: "Mustaqillik shoh ko'chasi, 19", orders: "1,100+ buyurtma/kun" },
+
+      // QOZOG'ISTON
+      { name: "Wildberries PVZ #KZ-01", city: "Olmaota", country: "kz", lat: 43.2389, lng: 76.8897, address: "Abay prospekti, 115", orders: "2,800+ buyurtma/kun" },
+      { name: "Wildberries PVZ #KZ-02", city: "Olmaota", country: "kz", lat: 43.2112, lng: 76.9212, address: "Al-Farabi prospekti, 77", orders: "3,200+ buyurtma/kun" },
+      { name: "Wildberries PVZ #KZ-03", city: "Olmaota", country: "kz", lat: 43.2689, lng: 76.9112, address: "Raimbek prospekti, 208", orders: "2,350+ buyurtma/kun" },
+      { name: "Wildberries PVZ #KZ-04", city: "Ostona", country: "kz", lat: 51.1282, lng: 71.4304, address: "Mangilik El prospekti, 38", orders: "2,950+ buyurtma/kun" },
+      { name: "Wildberries PVZ #KZ-05", city: "Ostona", country: "kz", lat: 51.1351, lng: 71.4112, address: "Turan prospekti, 24", orders: "2,400+ buyurtma/kun" },
+      { name: "Wildberries PVZ #KZ-06", city: "Chimkent", country: "kz", lat: 42.3417, lng: 69.5901, address: "Baydibek Bi prospekti, 51", orders: "1,850+ buyurtma/kun" },
+      { name: "Wildberries PVZ #KZ-07", city: "Qarag'andi", country: "kz", lat: 49.8019, lng: 73.1021, address: "Bukhar Zhirau prospekti, 42", orders: "1,600+ buyurtma/kun" },
+
+      // BELARUS
+      { name: "Wildberries PVZ #BY-01", city: "Minsk", country: "by", lat: 53.9045, lng: 27.5615, address: "Nezavisimosti prospekti, 78", orders: "3,100+ buyurtma/kun" },
+      { name: "Wildberries PVZ #BY-02", city: "Minsk", country: "by", lat: 53.9212, lng: 27.5312, address: "Pobediteley prospekti, 65", orders: "2,700+ buyurtma/kun" },
+      { name: "Wildberries PVZ #BY-03", city: "Minsk", country: "by", lat: 53.8712, lng: 27.5112, address: "Dzerzhinskogo prospekti, 104", orders: "2,400+ buyurtma/kun" },
+      { name: "Wildberries PVZ #BY-04", city: "Gomel", country: "by", lat: 52.4345, lng: 30.9754, address: "Lenina prospekti, 33", orders: "1,900+ buyurtma/kun" },
+      { name: "Wildberries PVZ #BY-05", city: "Brest", country: "by", lat: 52.0976, lng: 23.7341, address: "Moskovskaya ko'chasi, 210", orders: "1,750+ buyurtma/kun" },
+
+      // QIRG'IZISTON
+      { name: "Wildberries PVZ #KG-01", city: "Bishkek", country: "kg", lat: 42.8746, lng: 74.5698, address: "Chuy prospekti, 155", orders: "2,200+ buyurtma/kun" },
+      { name: "Wildberries PVZ #KG-02", city: "Bishkek", country: "kg", lat: 42.8412, lng: 74.6012, address: "Ahunbaev ko'chasi, 92", orders: "1,850+ buyurtma/kun" },
+      { name: "Wildberries PVZ #KG-03", city: "O'sh", country: "kg", lat: 40.5140, lng: 72.8161, address: "Lenina ko'chasi, 240", orders: "1,400+ buyurtma/kun" },
+
+      // ARMANISTON
+      { name: "Wildberries PVZ #AM-01", city: "Yerevan", country: "am", lat: 40.1792, lng: 44.4991, address: "Mashtots prospekti, 48", orders: "2,450+ buyurtma/kun" },
+      { name: "Wildberries PVZ #AM-02", city: "Yerevan", country: "am", lat: 40.2012, lng: 44.5112, address: "Komitas prospekti, 37", orders: "2,100+ buyurtma/kun" },
+      { name: "Wildberries PVZ #AM-03", city: "Gyumri", country: "am", lat: 40.7929, lng: 43.8465, address: "Sayat-Nova prospekti, 12", orders: "1,300+ buyurtma/kun" }
+    ];
+
+    // Xaritani initsializatsiya qilish funksiyasi
+    function initPvzMap() {
+      const mapContainer = document.getElementById('pvz-map');
+      if (!mapContainer || pvzMap) return;
+
+      pvzMap = L.map('pvz-map', {
+        center: [55.751244, 37.618423],
+        zoom: 6,
+        zoomControl: true,
+        scrollWheelZoom: false
+      });
+
+      // Bosilganda zoomni faollashtirish
+      pvzMap.on('focus', () => { pvzMap.scrollWheelZoom.enable(); });
+      pvzMap.on('click', () => { pvzMap.scrollWheelZoom.enable(); });
+
+      // CartoDB Dark Matter qatlami
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }).addTo(pvzMap);
+
+      markersLayer = L.layerGroup().addTo(pvzMap);
+
+      // Boshlang'ichda Rossiya nuqtalarini chizish
+      renderMarkers('ru');
+    }
+
+    // Markerlarni xaritaga chiqarish
+    function renderMarkers(countryCode) {
+      if (!markersLayer) return;
+      markersLayer.clearLayers();
+
+      const filtered = (countryCode === 'all')
+        ? pvzDatabase
+        : pvzDatabase.filter(item => item.country === countryCode);
+
+      filtered.forEach(item => {
+        // Neon ko'k aylana marker (Blue Circle Marker)
+        const marker = L.circleMarker([item.lat, item.lng], {
+          radius: 7,
+          fillColor: '#0284c7',
+          color: '#38bdf8',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 0.85
+        });
+
+        marker.on('mouseover', function() {
+          this.setRadius(10);
+          this.setStyle({ color: '#7dd3fc', fillColor: '#38bdf8' });
+        });
+        marker.on('mouseout', function() {
+          this.setRadius(7);
+          this.setStyle({ color: '#38bdf8', fillColor: '#0284c7' });
+        });
+
+        const popupContent = `
+          <div style="font-family: Inter, sans-serif; padding: 2px;">
+            <div style="color: #38bdf8; font-weight: 800; font-size: 13px; margin-bottom: 4px;">
+              ${item.name}
+            </div>
+            <div style="color: #f1f5f9; font-size: 12px; margin-bottom: 3px;">
+              📍 <strong>Manzil:</strong> ${item.address}
+            </div>
+            <div style="color: #94a3b8; font-size: 11px; margin-bottom: 5px;">
+              Shahar: <span style="color: #e2e8f0; font-weight: 600;">${item.city}</span>
+            </div>
+            <div style="padding-top: 4px; border-top: 1px solid #334155; display: flex; align-items: center; justify-content: space-between; font-size: 11px;">
+              <span style="color: #10b981; font-weight: 600;">✓ Faol punkt</span>
+              <span style="color: #f59e0b; font-family: monospace;">${item.orders}</span>
+            </div>
+          </div>
+        `;
+
+        marker.bindPopup(popupContent);
+        markersLayer.addLayer(marker);
+      });
+
+      const counterEl = document.getElementById('pvz-counter');
+      if (counterEl) {
+        if (countryCode === 'ru') counterEl.innerText = "2,023+ PVZ";
+        else if (countryCode === 'uz') counterEl.innerText = "140+ PVZ";
+        else if (countryCode === 'kz') counterEl.innerText = "280+ PVZ";
+        else if (countryCode === 'by') counterEl.innerText = "508+ PVZ";
+        else if (countryCode === 'kg') counterEl.innerText = "90+ PVZ";
+        else if (countryCode === 'am') counterEl.innerText = "65+ PVZ";
+        else counterEl.innerText = "3,100+ PVZ";
+      }
+    }
+
+    // Mamlakat tanlanganda
+    function onCountryChange(countryCode) {
+      renderMarkers(countryCode);
+
+      if (!pvzMap) return;
+
+      const countryViews = {
+        'all': { center: [50.0, 50.0], zoom: 4 },
+        'ru': { center: [55.751244, 37.618423], zoom: 6 },
+        'uz': { center: [41.299496, 69.240073], zoom: 6 },
+        'kz': { center: [48.019573, 66.923684], zoom: 5 },
+        'by': { center: [53.904540, 27.561524], zoom: 7 },
+        'kg': { center: [42.874621, 74.569800], zoom: 7 },
+        'am': { center: [40.179186, 44.499103], zoom: 8 }
+      };
+
+      const view = countryViews[countryCode] || countryViews['all'];
+      pvzMap.flyTo(view.center, view.zoom, {
+        duration: 1.2,
+        easeLinearity: 0.25
+      });
+    }
+
+    // Shaharga tezkor o'tish
+    function flyToCity(cityKey) {
+      if (!pvzMap) return;
+
+      const cityCoords = {
+        'moscow': { center: [55.751244, 37.618423], zoom: 11, country: 'ru' },
+        'spb': { center: [59.934280, 30.335099], zoom: 11, country: 'ru' },
+        'krasnodar': { center: [45.035470, 38.975313], zoom: 12, country: 'ru' },
+        'tashkent': { center: [41.299496, 69.240073], zoom: 12, country: 'uz' },
+        'almaty': { center: [43.238949, 76.889709], zoom: 12, country: 'kz' },
+        'minsk': { center: [53.904540, 27.561524], zoom: 12, country: 'by' }
+      };
+
+      const target = cityCoords[cityKey];
+      if (target) {
+        const sel = document.getElementById('country-select');
+        if (sel) sel.value = target.country;
+        renderMarkers(target.country);
+        pvzMap.flyTo(target.center, target.zoom, { duration: 1.4 });
+      }
+    }
+
+    // Sahifa yuklanganda ishga tushirish
     document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
+      initPvzMap();
     });
   </script>
 
