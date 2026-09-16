@@ -42,8 +42,8 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Leaflet Map CSS & JS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <style>
     body {
@@ -1645,18 +1645,16 @@ LIMIT 10;`,
     // =========================================================================
     // 7. WILDBERRIES LOGISTIKA PVZ XARITASI (LEAFLET.JS DARK MATTER)
     // =========================================================================
-    let pvzMap = null;
-    let markersLayer = null;
 
     // Power BI Geografik Logistika Modeli (WB_Logistics_PVZ.xlsx haqiqiy ma'lumotlari)
     const PVZ_META = {
-      'All': { file: 'data/all_coords.json', count: '28,312 PVZ', center: [54.0, 60.0], zoom: 3, radius: 2.8 },
-      "O'zbekiston": { file: 'data/ozbekiston.json', count: '77 PVZ', center: [41.3, 64.5], zoom: 6, radius: 6 },
-      'Armaniston': { file: 'data/armaniston.json', count: '289 PVZ', center: [40.2, 44.9], zoom: 8, radius: 5 },
-      'Belarus': { file: 'data/belarus.json', count: '902 PVZ', center: [53.8, 28.0], zoom: 7, radius: 4.5 },
-      "Qirg'iziston": { file: 'data/qirgiziston.json', count: '30 PVZ', center: [41.5, 74.5], zoom: 7, radius: 6 },
-      "Qozog'iston": { file: 'data/qozogiston.json', count: '445 PVZ', center: [48.5, 68.0], zoom: 5, radius: 5 },
-      'Rossiya': { file: 'data/rossiya.json', count: '26,569 PVZ', center: [58.0, 60.0], zoom: 4, radius: 3 }
+      'All': { file: './data/all_coords.json', count: '28,312 PVZ', center: [54.0, 60.0], zoom: 3, radius: 2.8 },
+      "O'zbekiston": { file: './data/ozbekiston.json', count: '77 PVZ', center: [41.3, 64.5], zoom: 6, radius: 6 },
+      'Armaniston': { file: './data/armaniston.json', count: '289 PVZ', center: [40.2, 44.9], zoom: 8, radius: 5 },
+      'Belarus': { file: './data/belarus.json', count: '902 PVZ', center: [53.8, 28.0], zoom: 7, radius: 4.5 },
+      "Qirg'iziston": { file: './data/qirgiziston.json', count: '30 PVZ', center: [41.5, 74.5], zoom: 7, radius: 6 },
+      "Qozog'iston": { file: './data/qozogiston.json', count: '445 PVZ', center: [48.5, 68.0], zoom: 5, radius: 5 },
+      'Rossiya': { file: './data/rossiya.json', count: '26,569 PVZ', center: [58.0, 60.0], zoom: 4, radius: 3 }
     };
 
     const PVZ_CACHE = {};
@@ -1683,6 +1681,11 @@ LIMIT 10;`,
       const mapContainer = document.getElementById('pvz-map');
       if (!mapContainer || pvzMap) return;
 
+      if (typeof L === 'undefined') {
+        console.error("Leaflet kutubxonasi yuklanmadi!");
+        return;
+      }
+
       pvzMap = L.map('pvz-map', {
         center: [54.0, 60.0],
         zoom: 3,
@@ -1704,6 +1707,15 @@ LIMIT 10;`,
 
       canvasRenderer = L.canvas({ padding: 0.5 });
       markersLayer = L.layerGroup().addTo(pvzMap);
+
+      // Katta ekran va mobil o'lchamlarni to'g'rilash
+      setTimeout(() => {
+        if (pvzMap) pvzMap.invalidateSize();
+      }, 300);
+
+      window.addEventListener('resize', () => {
+        if (pvzMap) pvzMap.invalidateSize();
+      });
 
       // Boshlang'ichda All (Barcha 28,312 PVZ) ma'lumotlarini chizish
       loadCountryData('All');
@@ -1834,11 +1846,17 @@ LIMIT 10;`,
       }
     }
 
-    // Sahifa yuklanganda ishga tushirish
-    document.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
+    // Sahifa yuklanganda ishga tushirish (Kafolatlangan ishga tushirish)
+    function startApp() {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
       initPvzMap();
-    });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', startApp);
+    } else {
+      startApp();
+    }
   </script>
 
 </body>
